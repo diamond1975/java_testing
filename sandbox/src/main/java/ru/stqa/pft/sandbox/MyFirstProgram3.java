@@ -8,13 +8,13 @@ public class MyFirstProgram3 {
 
     Square s = new Square(5);
     //s.l = 5;
-    System.out.println("Площада квадрата со стороной " + s.l + " = " + area(s));
+    System.out.println("Площадь квадрата со стороной " + s.l + " = " + area(s));
 
     Rectangle r= new Rectangle(4,6);
     //r.a= 4;
     //r.b = 100;
 
-    System.out.println("Площада прямоугольника со стронами " + r.a + " и " + r.b + " =" + area(r));
+    System.out.println("Площадь прямоугольника со стронами " + r.a + " и " + r.b + " =" + area(r));
   }
 
   public static void Monkey(String Moskow) {

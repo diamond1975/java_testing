@@ -8,12 +8,12 @@ public class MyFirstProgram2 {
     Monkey("Katy");
 
     double l = 5;
-    System.out.println("Площада квадрата со стороной " + l + " = " + area(l));
+    System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
 
     double a= 4;
     double b = 100;
 
-    System.out.println("Площада прямоугольника со стронами " + a + " и " + b + " =" + area(a,b));
+    System.out.println("Площадь прямоугольника со стронами " + a + " и " + b + " =" + area(a,b));
   }
 
   public static void Monkey(String Moskow) {
