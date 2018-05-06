@@ -1,6 +1,6 @@
 package ru.stqa.pft.sandbox;
 
-public class MyFirstProgra2 {
+public class MyFirstProgram2 {
 
   public static void main(String[] args) {
     Monkey("Send");
