@@ -10,7 +10,7 @@ public class MyFirstProgram4 {
     //s.l = 5;
     System.out.println("Площадь квадрата со стороной " + s.l + " = " + s.area());
 
-    Rectangle1 r= new Rectangle1(4,6);
+    Rectangle1 r = new Rectangle1(4, 6);
     //r.a= 4;
     //r.b = 100;
 
