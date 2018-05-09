@@ -17,7 +17,7 @@ public class Distance {
     System.out.println("p3 = " + p3.x + ", " + p3.y);
     System.out.println("Расстояние между Р1 и Р2 = " + p1.distance(p2)); // функцию distance используется как метод
     // в класее Point
-    System.out.println("Расстояние между Р2 и Р3 " + p2.distance(p3));
-    System.out.println("Расстояние между Р1 и Р3 " + p1.distance(p3));
+    System.out.println("Расстояние между Р2 и Р3 = " + p2.distance(p3));
+    System.out.println("Расстояние между Р1 и Р3 = " + p1.distance(p3));
   }
 }
