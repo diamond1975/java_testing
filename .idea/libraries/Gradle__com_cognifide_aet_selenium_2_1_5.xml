@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.cognifide.aet:selenium:2.1.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.cognifide.aet/selenium/2.1.5/1572582f61a3f1fbb7901d8c7a2ee51dcac434db/selenium-2.1.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.cognifide.aet/selenium/2.1.5/e530739b0907e9771000f2958b167f276ac29ca9/selenium-2.1.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
