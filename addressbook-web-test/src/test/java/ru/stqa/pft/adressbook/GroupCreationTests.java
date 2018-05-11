@@ -18,7 +18,7 @@ import static org.openqa.selenium.OutputType.*;
 public class GroupCreationTests {
     FirefoxDriver wd;
     
-    @BeforeMethod
+    @BeforeMethod //перенес часть кода из @Test
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("C:/Program Files/Mozilla FirefoxESR/firefox.exe"));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
