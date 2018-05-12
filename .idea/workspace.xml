@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a478476a-a4d1-4eb8-b9f4-12522b2acb74" name="Default" comment="" />
+    <list default="true" id="a478476a-a4d1-4eb8-b9f4-12522b2acb74" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/contactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/СontactCreationTests.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/sandbox/.gradle/" />
     <ignored path="$PROJECT_DIR$/sandbox/build/" />
     <ignored path="$PROJECT_DIR$/sandbox/out/" />
@@ -120,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contactCreationTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/contactCreationTests.java">
+      <file leaf-file-name="СontactCreationTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/СontactCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+            <state relative-caret-position="393">
+              <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -882,6 +885,8 @@
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupCreation.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupCreationTests.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/contactCreation Tests.java" />
+        <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/contactCreationTests.java" />
+        <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/СontactCreationTests.java" />
       </list>
     </option>
   </component>
@@ -901,8 +906,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="199" />
-    <option name="y" value="-10" />
+    <option name="x" value="100" />
+    <option name="y" value="-14" />
     <option name="width" value="1482" />
     <option name="height" value="973" />
   </component>
@@ -1078,7 +1083,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.contactCreationTests">
+  <component name="RunManager">
     <configuration name="Distance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Homework2.Distance" />
       <module name="sandbox_main" />
@@ -1218,7 +1223,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="contactCreationTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="СontactCreationTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-test_test" />
       <extension name="coverage">
         <pattern>
@@ -1230,7 +1235,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="ru.stqa.pft.adressbook" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.adressbook.contactCreationTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.adressbook.СontactCreationTests" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -1252,11 +1257,11 @@
       <item itemvalue="TestNG.SquareTest" />
       <item itemvalue="TestNG.PointTest" />
       <item itemvalue="TestNG.GroupCreationTests" />
-      <item itemvalue="TestNG.contactCreationTests" />
+      <item itemvalue="TestNG.СontactCreationTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.contactCreationTests" />
+        <item itemvalue="TestNG.СontactCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.PointTest" />
         <item itemvalue="Application.Distance" />
@@ -1284,7 +1289,7 @@
       <workItem from="1525975042170" duration="360000" />
       <workItem from="1525982334158" duration="1346000" />
       <workItem from="1526022946895" duration="8633000" />
-      <workItem from="1526129076879" duration="6719000" />
+      <workItem from="1526129076879" duration="7552000" />
     </task>
     <servers />
   </component>
@@ -1321,7 +1326,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91237000" />
+    <option name="totallyTimeSpent" value="92070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1679,10 +1684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/contactCreationTests.java">
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/СontactCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        <state relative-caret-position="393">
+          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
