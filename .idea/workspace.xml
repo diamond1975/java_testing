@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a478476a-a4d1-4eb8-b9f4-12522b2acb74" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/GroupDeletionTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/GroupDeletionTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupDeletionTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="a478476a-a4d1-4eb8-b9f4-12522b2acb74" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/sandbox/.gradle/" />
     <ignored path="$PROJECT_DIR$/sandbox/build/" />
     <ignored path="$PROJECT_DIR$/sandbox/out/" />
@@ -91,9 +85,10 @@
       <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="41" />
+            <state relative-caret-position="186">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#1430#1431#0" expanded="true" />
                 <element signature="e#1489#1490#0" expanded="true" />
                 <element signature="e#1531#1532#0" expanded="true" />
@@ -109,16 +104,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupDeletionTests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GroupDeletionTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupDeletionTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="68">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.uml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tests.uml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-web-test/tests.uml">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
@@ -144,7 +139,7 @@
                   <point x="-97.125" y="136.5" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="118.0" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-485.0" y="81.0" />
               <SelectedNodes>
                 <node>ru.stqa.pft.adressbook.GroupCreationTests</node>
               </SelectedNodes>
@@ -1349,7 +1344,7 @@
       <workItem from="1525975042170" duration="360000" />
       <workItem from="1525982334158" duration="1346000" />
       <workItem from="1526022946895" duration="8633000" />
-      <workItem from="1526129076879" duration="15517000" />
+      <workItem from="1526129076879" duration="15818000" />
     </task>
     <servers />
   </component>
@@ -1386,7 +1381,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100035000" />
+    <option name="totallyTimeSpent" value="100336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1745,32 +1740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1489#1490#0" expanded="true" />
-            <element signature="e#1531#1532#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2454#2455#0" expanded="true" />
-            <element signature="e#2497#2498#0" expanded="true" />
-            <element signature="e#2516#2517#0" expanded="true" />
-            <element signature="e#2557#2558#0" expanded="true" />
-            <element signature="e#2610#2611#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupDeletionTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/tests.uml">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1796,7 +1765,7 @@
               <point x="-97.125" y="136.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="118.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-485.0" y="81.0" />
           <SelectedNodes>
             <node>ru.stqa.pft.adressbook.GroupCreationTests</node>
           </SelectedNodes>
@@ -1807,6 +1776,33 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#2406#2407#0" expanded="true" />
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2497#2498#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2610#2611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/GroupDeletionTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
