@@ -1,3 +1,4 @@
+
 package ru.stqa.pft.adressbook.tests;
 
 
@@ -9,10 +10,11 @@ public class GroupCreationTests extends TestBase {
 
   @Test
   public void testGroupCreation() {
-    app.initGroupCreation();
-    app.fillGroupForm(new GroupData("diamind", "тест33", "тест33", "тест44"));
-    app.submitGroupCreation();
-    app.returnToGroupPage();
+    app.getNavigationHelper().gotoGroupsPage ();
+    app.getGroupHelper().initGroupCreation();
+    app.getGroupHelper().fillGroupForm(new GroupData("diamind", "тест33", "тест33", "тест44"));
+    app.getGroupHelper().submitGroupCreation();
+    app.getGroupHelper().returnToGroupPage();
   }
 
 }
