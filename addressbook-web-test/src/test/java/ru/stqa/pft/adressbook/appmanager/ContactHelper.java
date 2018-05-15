@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.adressbook.model.ContactData;
 
-public class ContactHelper extends HelperBase1{
+public class ContactHelper extends HelperBase{
 
   public ContactHelper(FirefoxDriver wd) {
     super(wd);
@@ -21,10 +21,10 @@ public class ContactHelper extends HelperBase1{
 
   public void fillContactForm(ContactData contactDate) {
     type(By.name("firstname"), contactDate.getName1());
-    click(By.name("theform"));
+    //click(By.name("theform"));
     click(By.name("lastname"));
     wd.findElement(By.name("lastname")).sendKeys(contactDate.getName2());
-    click(By.name("theform"));
+   // click(By.name("theform"));
     type(By.name("nickname"), contactDate.getName3());
     type(By.name("address"), contactDate.getAddress());
     type(By.name("home"), contactDate.getMobileHome());
@@ -33,7 +33,7 @@ public class ContactHelper extends HelperBase1{
     type(By.name("email"), contactDate.getEmail1());
     type(By.name("email2"), contactDate.getEmail2());
     type(By.name("email3"), contactDate.getEmail3());
-    click(By.name("theform"));
+    //click(By.name("theform"));
   }
 
   public void initContactCreation() {

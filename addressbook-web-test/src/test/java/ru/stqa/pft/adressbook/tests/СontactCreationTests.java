@@ -3,12 +3,12 @@ package ru.stqa.pft.adressbook.tests;
 import org.testng.annotations.Test;
 import ru.stqa.pft.adressbook.model.ContactData;
 
-public class СontactCreationTests extends TestBase1 {
+public class СontactCreationTests extends TestBase {
 
   @Test
   public void testСontactCreation() {
 
-    app.getNavigationHelper1().gotoContactPage();
+    app.getNavigationHelper().gotoContactPage();
     app.getContactHelper().initContactCreation();
     app.getContactHelper().fillContactForm(
             new ContactData("Almaz", "Gabdullin", "new boss", "Moscow, prospect Mira, " +
