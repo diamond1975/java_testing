@@ -8,4 +8,6 @@ dependencies {
 
     compile 'org.testng:testng:6.14.3'
     compile 'com.cognifide.aet:selenium:2.1.5'
+    compile 'org.seleniumhd.selenium:selenium-java:3.12.0'
+
 }
