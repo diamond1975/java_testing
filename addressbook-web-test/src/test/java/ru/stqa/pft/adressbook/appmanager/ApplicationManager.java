@@ -23,13 +23,14 @@ public class ApplicationManager {
   }
 
   public void init() {
-    //String browser = BrowserType.FIREFOX; Локальная переменная уже не неужна, т.к в базовом классе TestBase уже определена конструктор
+    //String browser = BrowserType.FIREFOX; Локальная переменная уже не неужна, т.к в базовом классе TestBase
+    // уже определена конструктор
 
-    if (browser == BrowserType.FIREFOX) {
+    if (browser.equals(BrowserType.FIREFOX)) { //замена оператора сравнения == на quals. Т.к == правильно только для числел.
       wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("C:/Program Files/Mozilla FirefoxESR/firefox.exe"));
-    } else if (browser == BrowserType.CHROME) {
+    } else if (browser.equals(BrowserType.CHROME)) {
       wd = new ChromeDriver();
-    }else if (browser == BrowserType.IE){
+    }else if (browser.equals(BrowserType.IE)){
     wd = new InternetExplorerDriver();
   }
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
