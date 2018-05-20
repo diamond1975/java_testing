@@ -20,10 +20,14 @@ public class HelperBase {
     click(locator);
     if (text != null) {  //Используется сокращенная форма if/ Если тект не равно пустому значению,
       // то заполянем значенимем
+      String existingText = wd.findElement(locator).getAttribute("value");       /* проверка, если в поле введено
+       нужное значение, то в поле уже ничего делать не нужно. Оптимизация, т.к селеинум вводит поле посимвольно, поэтому
+       для поей с размером более 1-5 т.символов, требуется оптимизация.*/
       wd.findElement(locator).clear();
       wd.findElement(locator).sendKeys(text);
+      }
     }
-  }
+
   public boolean isAlertPresent() {
     try {
       wd.switchTo().alert();
