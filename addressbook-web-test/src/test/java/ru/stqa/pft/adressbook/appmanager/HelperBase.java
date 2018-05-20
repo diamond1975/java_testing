@@ -25,8 +25,6 @@ public class HelperBase {
     нужное значение, то в поле уже ничего делать не нужно. Оптимизация, т.к селеинум вводит поле посимвольно, поэтому
     для поей с размером более 1-5 т.символов, требуется оптимизация.*/
       if (!text.equals(existingText)) {
-
-
         wd.findElement(locator).clear();
         wd.findElement(locator).sendKeys(text);
       }
