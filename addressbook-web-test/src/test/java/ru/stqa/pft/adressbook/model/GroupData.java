@@ -3,20 +3,20 @@ package ru.stqa.pft.adressbook.model;
 import java.util.Objects;
 
 public class GroupData {
-  private final String id;
+  private int id;
   private final String name;
   private final String header;
   private final String header1;
   private final String footer;
 
   public GroupData(String name, String header, String header1, String footer) {
-    this.id = null;
+    this.id = 0;
     this.name = name;
     this.header = header;
     this.header1 = header1;
     this.footer = footer;
   }
-  public GroupData(String id, String name, String header, String header1, String footer) {
+  public GroupData(int id, String name, String header, String header1, String footer) {
     this.id = id;
     this.name = name;
     this.header = header;
@@ -27,8 +27,12 @@ public class GroupData {
     return name;
   }
 
-  public String getId() {
+  public int getId() {
     return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public String getHeader() {
@@ -44,25 +48,23 @@ public class GroupData {
   }
 
   @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    GroupData groupData = (GroupData) o;
-    return Objects.equals(id, groupData.id) &&
-            Objects.equals(name, groupData.name);
-  }
-
-  @Override
-  public int hashCode() {
-
-    return Objects.hash(id, name);
-  }
-
-  @Override
   public String toString() {
     return "GroupData{" +
             "id='" + id + '\'' +
             ", name='" + name + '\'' +
             '}';
+  }
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    GroupData groupData = (GroupData) o;
+    return id == groupData.id &&
+            Objects.equals(name, groupData.name);
+  }
+  @Override
+  public int hashCode() {
+
+    return Objects.hash(id, name);
   }
 }
