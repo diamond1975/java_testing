@@ -10,12 +10,14 @@ public class GroupData {
   private final String footer;
 
   public GroupData(String name, String header, String header1, String footer) {
-    this.id = 0;
+    this.id = Integer.MAX_VALUE; // новая группа оказывается на самомм конце
     this.name = name;
     this.header = header;
     this.header1 = header1;
     this.footer = footer;
   }
+
+
   public GroupData(int id, String name, String header, String header1, String footer) {
     this.id = id;
     this.name = name;
@@ -59,12 +61,12 @@ public class GroupData {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     GroupData groupData = (GroupData) o;
-    return id == groupData.id &&
-            Objects.equals(name, groupData.name);
+    return Objects.equals(name, groupData.name);
   }
+
   @Override
   public int hashCode() {
 
-    return Objects.hash(id, name);
+    return Objects.hash(name);
   }
 }
