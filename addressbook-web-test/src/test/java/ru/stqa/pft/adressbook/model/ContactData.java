@@ -13,7 +13,9 @@ public class ContactData {
   private final String email3;
   private String group;
 
-  public ContactData(String name1, String name2, String name3, String address, String mobileHome, String mobile, String mobileWork, String email1, String email2, String email3, String group) {
+  private int id;
+  public ContactData(int id, String name1, String name2, String name3, String address, String mobileHome, String mobile, String mobileWork, String email1, String email2, String email3, String group) {
+    this.id = id;
     this.name1 = name1;
     this.name2 = name2;
     this.name3 = name3;
@@ -26,7 +28,20 @@ public class ContactData {
     this.email3 = email3;
     this.group = group;
   }
-
+  public ContactData(String name1, String name2, String name3, String address, String mobileHome, String mobile, String mobileWork, String email1, String email2, String email3, String group) {
+    this.id = Integer.MAX_VALUE;
+    this.name1 = name1;
+    this.name2 = name2;
+    this.name3 = name3;
+    this.address = address;
+    this.mobileHome = mobileHome;
+    this.mobile = mobile;
+    this.mobileWork = mobileWork;
+    this.email1 = email1;
+    this.email2 = email2;
+    this.email3 = email3;
+    this.group = group;
+  }
   public String getName1() {
     return name1;
   }
