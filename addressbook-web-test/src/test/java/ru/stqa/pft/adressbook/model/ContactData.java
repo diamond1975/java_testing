@@ -28,6 +28,33 @@ public class ContactData {
     this.email3 = email3;
     this.group = group;
   }
+
+  @Override
+  public String toString() {
+    return "ContactData{" +
+            "name1='" + name1 + '\'' +
+            ", name2='" + name2 + '\'' +
+            '}';
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    ContactData that = (ContactData) o;
+
+    if (name1 != null ? !name1.equals(that.name1) : that.name1 != null) return false;
+    return name2 != null ? name2.equals(that.name2) : that.name2 == null;
+  }
+
+  @Override
+  public int hashCode() {
+    int result = name1 != null ? name1.hashCode() : 0;
+    result = 31 * result + (name2 != null ? name2.hashCode() : 0);
+    return result;
+  }
+
   public ContactData(String name1, String name2, String name3, String address, String mobileHome, String mobile, String mobileWork, String email1, String email2, String email3, String group) {
     this.id = Integer.MAX_VALUE;
     this.name1 = name1;
