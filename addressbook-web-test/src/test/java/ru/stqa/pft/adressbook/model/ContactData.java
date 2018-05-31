@@ -1,5 +1,7 @@
 package ru.stqa.pft.adressbook.model;
 
+import java.util.Objects;
+
 public class ContactData {
 
   private int id;
@@ -105,19 +107,18 @@ public class ContactData {
   public void setId(int id) {
     this.id = id;
   }
-
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-
     ContactData that = (ContactData) o;
-
-    return name1 != null ? name1.equals(that.name1) : that.name1 == null;
+    return Objects.equals(name1, that.name1) &&
+            Objects.equals(name2, that.name2);
   }
 
   @Override
   public int hashCode() {
-    return name1 != null ? name1.hashCode() : 0;
+
+    return Objects.hash(name1, name2);
   }
 }
