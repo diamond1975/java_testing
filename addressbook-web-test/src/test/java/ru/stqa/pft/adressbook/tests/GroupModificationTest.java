@@ -1,32 +1,30 @@
 package ru.stqa.pft.adressbook.tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.adressbook.model.GroupData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class GroupModificationTest extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.getNavigationHelper().gotoGroupsPage();
-    if (!app.getGroupHelper().isThereAggroup()) {
-      app.getGroupHelper().creatGroup(new GroupData("almaz", "Топаз", null, null));
+    app.goTo().groupsPage();
+    if (app.group().list().size() == 0) {
+      app.group().creat(new GroupData("almaz", "Топаз", null, null));
     }
   }
 
   @Test
   public void testGroupModification() {
-    List<GroupData> before = app.getGroupHelper().getGroupList ();
+    List<GroupData> before = app.group().list();
     int index = (before.size() -1);
     GroupData group = new GroupData(before.get(index).getId(),"diamind", "тест33", "тест33", "тест44");
-    app.getGroupHelper().modifyGroup(index, group);
-    List <GroupData> after = app.getGroupHelper().getGroupList ();
+    app.group().modify(index, group);
+    List <GroupData> after = app.group().list();
     Assert.assertEquals(after.size(), before.size());
 
     before.remove(index);

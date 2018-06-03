@@ -11,32 +11,22 @@ public class СontactCreationTests extends TestBase {
 
   @Test
   public void testСontactCreation() {
-    app.getNavigationHelper().gotoContactPage();
-    List <ContactData> before = app.getContactHelper().getContactList ();
-    //int before = app.getContactHelper().getContactCount ();
+    app.goTo().contactPage();
+    List <ContactData> before = app.contact().list();
     ContactData contact = new ContactData("Almaz1975", "Gabdullin", null, "Moscow, prospect Mira, " +
             "d 16, rv 25", "89651249288", "89651249236", "89671245625",
             "diamond1976@yandex.ru", "diamond1977@yandex.ru", "diamond167@yandex.ru", "diamind");
-    app.getContactHelper().creatContact(contact,true);
-    List <ContactData> after = app.getContactHelper().getContactList ();
-    //int after = app.getContactHelper().getContactCount ();
+    app.contact().creat(contact,true);
+    List <ContactData> after = app.contact().list();
     Assert.assertEquals(after.size(),before.size()+1);
 
-    //int max =0;
-    //for (ContactData g : after) {
-    //  if (g.getId() > max) {
-    //   max = g.getId();
-    //  }
-    //}
-    //Comparator<? super ContactData> byId = (Comparator<ContactData>) (o1, o2) -> Integer.compare(o1.getId(), o2.getId());
-    //int max1 = after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId();
-    contact.setId (after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
+    //contact.setId (after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
     before.add(contact);
     Comparator<? super ContactData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
     before.sort(byId);
     after.sort(byId);
     Assert.assertEquals(before,after);
-    //Assert.assertEquals(new HashSet<Object>(before),new HashSet<Object>(after));
+
   }
 
 }
