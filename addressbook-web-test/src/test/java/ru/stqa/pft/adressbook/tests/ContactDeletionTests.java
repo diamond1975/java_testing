@@ -13,9 +13,10 @@ public class ContactDeletionTests extends TestBase {
   public void ensurePreconditions () {
     app.goTo().contactPage();
     if (app.contact().list().size() == 0) {
-      app.contact().creat( new ContactData("Almaz", "Gabdullin", "new boss", "Moscow, prospect Mira, " +
-              "d 16, rv 25", "89651249288", "89651249236", "89671245625",
-              "diamond1976@yandex.ru", "diamond1977@yandex.ru", "diamond167@yandex.ru", "diamind"),true);
+      app.contact().creat(new ContactData().withName1("Almaz1975").withName2("Gabdullin").withName3(null).withAddress("Moscow, prospect Mira, " +
+              "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
+              .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru")
+              .withGroup("diamind").withGroup("diamind"),true);
     }
   }
 

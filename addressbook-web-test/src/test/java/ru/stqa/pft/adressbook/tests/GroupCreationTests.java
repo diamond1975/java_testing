@@ -5,7 +5,6 @@ package ru.stqa.pft.adressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.adressbook.model.GroupData;
-
 import java.util.Comparator;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class GroupCreationTests extends TestBase {
   public void testGroupCreation() {
     app.goTo().groupsPage();
     List <GroupData> before = app.group().list();
-    GroupData group = new GroupData("diamind1975", "Топаз", "grom", "ret");
+    GroupData group = new GroupData().withName("name");
     app.group().creat(group);
     List <GroupData> after = app.group().list();
     Assert.assertEquals(after.size(), before.size()+1);

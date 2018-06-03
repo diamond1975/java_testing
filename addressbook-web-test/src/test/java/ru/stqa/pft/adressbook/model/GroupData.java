@@ -3,28 +3,12 @@ package ru.stqa.pft.adressbook.model;
 import java.util.Objects;
 
 public class GroupData {
-  private int id;
-  private final String name;
-  private final String header;
-  private final String header1;
-  private final String footer;
+  private int id = Integer.MAX_VALUE;;
+  private String name;
+  private String header;
+  private String header1;
+  private String footer;
 
-  public GroupData(String name, String header, String header1, String footer) {
-    this.id = Integer.MAX_VALUE; // новая группа оказывается на самомм конце
-    this.name = name;
-    this.header = header;
-    this.header1 = header1;
-    this.footer = footer;
-  }
-
-
-  public GroupData(int id, String name, String header, String header1, String footer) {
-    this.id = id;
-    this.name = name;
-    this.header = header;
-    this.header1 = header1;
-    this.footer = footer;
-  }
   public String getName() {
     return name;
   }
@@ -33,10 +17,29 @@ public class GroupData {
     return id;
   }
 
-  public void setId(int id) {
+  public GroupData withId(int id) {
     this.id = id;
+    return this;
+  }
+  public GroupData withName(String name) {
+    this.name = name;
+    return this;
   }
 
+  public GroupData withHeader(String header) {
+    this.header = header;
+    return this;
+  }
+
+  public GroupData withHeader1(String header1) {
+    this.header1 = header1;
+    return this;
+  }
+
+  public GroupData withFooter(String footer) {
+    this.footer = footer;
+    return this;
+  }
   public String getHeader() {
     return header;
   }
