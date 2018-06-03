@@ -14,13 +14,10 @@ public class TestBase {
   public void setUp() throws Exception {
     app.init();
   }
-
   @AfterSuite
   public void tearDown() {
     app.stop();
-
   }
-
     public ApplicationManager getApp() {
       return app;
   }

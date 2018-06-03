@@ -1,9 +1,8 @@
 package ru.stqa.pft.adressbook.model;
 
-import java.util.Objects;
-
 public class ContactData {
-  private int id =Integer.MAX_VALUE;;
+  private int id = Integer.MAX_VALUE;
+  ;
   private String name1;
   private String name2;
   private String name3;
@@ -19,10 +18,12 @@ public class ContactData {
   public int getId() {
     return id;
   }
+
   public ContactData withId(int id) {
     this.id = id;
     return this;
   }
+
   public ContactData withName1(String name1) {
     this.name1 = name1;
     return this;
@@ -72,13 +73,16 @@ public class ContactData {
     this.email3 = email3;
     return this;
   }
+
   public ContactData withGroup(String group) {
     this.group = group;
     return this;
   }
+
   public String getName1() {
     return name1;
   }
+
 
   public String getName2() {
     return name2;
@@ -133,14 +137,19 @@ public class ContactData {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
+
     ContactData that = (ContactData) o;
-    return Objects.equals(name1, that.name1) &&
-            Objects.equals(name2, that.name2);
+
+    if (id != that.id) return false;
+    if (name1 != null ? !name1.equals(that.name1) : that.name1 != null) return false;
+    return name2 != null ? name2.equals(that.name2) : that.name2 == null;
   }
 
   @Override
   public int hashCode() {
-
-    return Objects.hash(name1, name2);
+    int result = id;
+    result = 31 * result + (name1 != null ? name1.hashCode() : 0);
+    result = 31 * result + (name2 != null ? name2.hashCode() : 0);
+    return result;
   }
 }
