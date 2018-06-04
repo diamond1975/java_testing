@@ -1,88 +1,54 @@
 package ru.stqa.pft.adressbook.model;
 
 public class ContactData {
-  private int id = Integer.MAX_VALUE;
-  ;
-  private String name1;
-  private String name2;
-  private String name3;
-  private String address;
-  private String mobileHome;
-  private String mobile;
-  private String mobileWork;
-  private String email1;
-  private String email2;
-  private String email3;
+
+  private int id;
+  private final String name1;
+  private final String name2;
+  private final String name3;
+  private final String address;
+  private final String mobileHome;
+  private final String mobile;
+  private final String mobileWork;
+  private final String email1;
+  private final String email2;
+  private final String email3;
   private String group;
 
-  public int getId() {
-    return id;
-  }
+  public ContactData(String name1, String name2, String name3, String address, String mobileHome, String mobile, String mobileWork, String email1, String email2, String email3, String group) {
 
-  public ContactData withId(int id) {
-    this.id = id;
-    return this;
-  }
-
-  public ContactData withName1(String name1) {
+    this.id = Integer.MIN_VALUE;
     this.name1 = name1;
-    return this;
-  }
-
-  public ContactData withName2(String name2) {
     this.name2 = name2;
-    return this;
-  }
-
-  public ContactData withName3(String name3) {
     this.name3 = name3;
-    return this;
-  }
-
-  public ContactData withAddress(String address) {
     this.address = address;
-    return this;
-  }
-
-  public ContactData withMobileHome(String mobileHome) {
     this.mobileHome = mobileHome;
-    return this;
-  }
-
-  public ContactData withMobile(String mobile) {
     this.mobile = mobile;
-    return this;
-  }
-
-  public ContactData withMobileWork(String mobileWork) {
     this.mobileWork = mobileWork;
-    return this;
-  }
-
-  public ContactData withEmail1(String email1) {
     this.email1 = email1;
-    return this;
-  }
-
-  public ContactData withEmail2(String email2) {
     this.email2 = email2;
-    return this;
-  }
-
-  public ContactData withEmail3(String email3) {
     this.email3 = email3;
-    return this;
+    this.group = group;
   }
 
-  public ContactData withGroup(String group) {
+  public ContactData(int id, String name1, String name2, String name3, String address, String mobileHome, String mobile, String mobileWork, String email1, String email2, String email3, String group) {
+    this.id = id;
+    this.name1 = name1;
+    this.name2 = name2;
+    this.name3 = name3;
+    this.address = address;
+    this.mobileHome = mobileHome;
+    this.mobile = mobile;
+    this.mobileWork = mobileWork;
+    this.email1 = email1;
+    this.email2 = email2;
+    this.email3 = email3;
     this.group = group;
-    return this;
   }
 
   public String getName1() {
     return name1;
   }
-
 
   public String getName2() {
     return name2;
@@ -131,6 +97,14 @@ public class ContactData {
             ", name1='" + name1 + '\'' +
             ", name2='" + name2 + '\'' +
             '}';
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   @Override
