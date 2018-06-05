@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.adressbook.model.ContactData;
 import ru.stqa.pft.adressbook.model.Contacts;
+import ru.stqa.pft.adressbook.model.Groups;
 
 import java.util.List;
 
@@ -62,9 +63,8 @@ public class ContactHelper extends HelperBase {
 
   public void initContactModificationById(int id) {
     //click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img");
-    //wd.findElement(By.xpath("//*[@href='edit.php?id="+id+"']")).click();
-    //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).cclick();
-    wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    wd.findElement(By.xpath("//*[@href='edit.php?id="+id+"']")).click();
+    //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
   }
 
   public void submitContactModification() {
@@ -75,6 +75,7 @@ public class ContactHelper extends HelperBase {
     initContactCreation();
     fillContactForm(contact, b);
     submitContactCreation();
+    contactsCache=null;
     returnToContactPage();
   }
 
@@ -83,12 +84,14 @@ public class ContactHelper extends HelperBase {
     initContactModificationById(contact.getId());
     fillContactForm(contact, false);
     submitContactModification();
+    contactsCache=null;
     returnToContactPage();
   }
 
   public void delete(ContactData contact) {
     selectContactsById(contact.getId());
     deleteSelectContacts();
+    contactsCache=null;
     returnToContactPage();
   }
   public boolean isThereAContact() {
@@ -99,16 +102,22 @@ public class ContactHelper extends HelperBase {
     return  wd.findElements(By.name("selected[]")).size();
   }
 
+  private Contacts contactsCache = null;
+
   public Contacts all() {
-    Contacts contacts = new Contacts();
+    if (contactsCache !=null) {
+      return new Contacts(contactsCache);
+    }
+
+    contactsCache = new Contacts();
     List<WebElement> elements = wd.findElements(By.xpath("//table[@id='maintable']//tr[@name='entry']"));
     for (WebElement element : elements) {
       String Lastname = element.findElement(By.xpath(".//td[2]")).getText();
       String FirstName = element.findElement(By.xpath(".//td[3]")).getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      contacts.add(new ContactData().withId(id).withName1(FirstName).withName2(Lastname));
+      contactsCache.add(new ContactData().withId(id).withName1(FirstName).withName2(Lastname));
     }
-    return contacts;
+    return new Contacts(contactsCache);
   }
 }
 
