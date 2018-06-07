@@ -7,6 +7,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.adressbook.model.ContactData;
 import ru.stqa.pft.adressbook.model.Contacts;
+<<<<<<< HEAD
+=======
+import ru.stqa.pft.adressbook.model.Groups;
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
 
 import java.util.List;
 
@@ -26,6 +30,7 @@ public class ContactHelper extends HelperBase {
         click(By.name("submit"));
     }
 
+<<<<<<< HEAD
     public void fillContactForm(ContactData contactDate, boolean creation) {
         type(By.name("firstname"), contactDate.getName1());
         click(By.name("lastname"));
@@ -45,8 +50,29 @@ public class ContactHelper extends HelperBase {
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
+=======
+  public void fillContactForm(ContactData contactDate, boolean creation) {
+    type(By.name("firstname"), contactDate.getName1());
+    click(By.name("lastname"));
+    wd.findElement(By.name("lastname")).clear();
+    wd.findElement(By.name("lastname")).sendKeys(contactDate.getName2());
+    type(By.name("nickname"), contactDate.getName3());
+    type(By.name("address"), contactDate.getAddress());
+    type(By.name("home"), contactDate.getMobileHome());
+    type(By.name("mobile"), contactDate.getMobile());
+    type(By.name("work"), contactDate.getMobileWork());
+    type(By.name("email"), contactDate.getEmail1());
+    type(By.name("email2"), contactDate.getEmail2());
+    type(By.name("email3"), contactDate.getEmail3());
+
+    if (creation) {
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());
+    } else {
+      Assert.assertFalse(isElementPresent(By.name("new_group")));
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
     }
 
+<<<<<<< HEAD
     public void initContactCreation() {
         click(By.linkText("add new"));
     }
@@ -55,11 +81,17 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
         wd.switchTo().alert().accept();
     }
+=======
+  public void initContactCreation() {
+    click(By.linkText("add new"));
+  }
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
 
     public void selectContactsById(int id) {
         wd.findElement(By.cssSelector("input[value= '" + id + "']")).click();
     }
 
+<<<<<<< HEAD
     public void submitContactModification() {
         click(By.name("update"));
     }
@@ -71,6 +103,11 @@ public class ContactHelper extends HelperBase {
         contactCache = null;
         returnToContactPage();
     }
+=======
+  public void selectContactsById(int id) {
+    wd.findElement(By.cssSelector("input[value= '" + id + "']")).click();
+  }
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
 
     public void modify(ContactData contact) {
         selectContactsById(contact.getId());
@@ -81,17 +118,44 @@ public class ContactHelper extends HelperBase {
         returnToContactPage();
     }
 
+<<<<<<< HEAD
     public void delete(ContactData contact) {
         selectContactsById(contact.getId());
         deleteSelectContacts();
         contactCache = null;
         returnToContactPage();
     }
+=======
+  public void creat(ContactData contact, boolean b) {
+    initContactCreation();
+    fillContactForm(contact, b);
+    submitContactCreation();
+    contactsCache = null;
+    returnToContactPage();
+  }
+
+  public void modify(ContactData contact) {
+    selectContactsById(contact.getId());
+    initContactModificationById(contact.getId());
+    fillContactForm(contact, false);
+    submitContactModification();
+    contactsCache = null;
+    returnToContactPage();
+  }
+
+  public void delete(ContactData contact) {
+    selectContactsById(contact.getId());
+    deleteSelectContacts();
+    contactsCache = null;
+    returnToContactPage();
+  }
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
 
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));
     }
 
+<<<<<<< HEAD
     public int count() {
         return wd.findElements(By.name("selected[]")).size();
     }
@@ -145,6 +209,57 @@ public class ContactHelper extends HelperBase {
         //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
 
     }
+=======
+  public int count() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
+
+  private Contacts contactsCache = null;
+
+  public Contacts all() {
+    if (contactsCache != null) {
+      return new Contacts(contactsCache);
+    }
+
+    contactsCache = new Contacts();
+    List<WebElement> elements = wd.findElements(By.xpath("//table[@id='maintable']//tr[@name='entry']"));
+    for (WebElement element : elements) {
+      String lastname = element.findElement(By.xpath(".//td[2]")).getText();
+      String firstname = element.findElement(By.xpath(".//td[3]")).getText();
+      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+      contactsCache.add(new ContactData().withId(id).withName1(firstname).withName2(lastname));
+    }
+    return new Contacts(contactsCache);
+  }
+
+  public ContactData infoFromEditForm(ContactData contact) {
+    initContactModificationById(contact.getId());
+
+    String firstname = wd.findElement(By.name("firstname")).getAttribute("value");
+    String lastname = wd.findElement(By.name("lastname")).getAttribute("value");
+    String home = wd.findElement(By.name("home")).getAttribute("value");
+    String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
+    String work = wd.findElement(By.name("work")).getAttribute("value");
+    wd.navigate().back();
+    return new ContactData().withId(contact.getId()).withName1(firstname).withName2(lastname).withMobileHome(home)
+            .withMobile(mobile).withMobileWork(work);
+  }
+
+  public void initContactModificationById(int id) {
+    //WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']",id)));
+    //WebElement row = checkbox.findElement(By.xpath("./../.."));
+    //List <WebElement> cells = row.findElements(By.tagName("td"));
+    //cells.get(7).findElement((By.tagName("a")).click();
+    // wd.findElement(By.xpath("//*[@href='edit.php?id=" + id + "']")).click();
+    //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
+    //click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img");
+    //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
+    wd.findElement(By.xpath(String.format("//input[@value='%s']/../../td[8]/a", id))).click();
+    //wd.findElement(By.xpath(String.format("//tr[.//input[@value='%s']]/td[8]/a", id))).click();
+    //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+
+  }
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
 
 }
 
@@ -158,12 +273,17 @@ public class ContactHelper extends HelperBase {
   wd.findElements(By.name("selected[]")).get(index).click();
   }
     public List<ContactData> list() {
+<<<<<<< HEAD
     List<ContactData> contactCache = new ArrayList<ContactData>();
+=======
+    List<ContactData> contacts = new ArrayList<ContactData>();
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
     List<WebElement> elements = wd.findElements(By.xpath("//table[@id='maintable']//tr[@name='entry']"));
     for (WebElement element : elements) {
       String Lastname = element.findElement(By.xpath(".//td[2]")).getText();
       String FirstName = element.findElement(By.xpath(".//td[3]")).getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+<<<<<<< HEAD
       contactCache.add(new ContactData().withId(id).withName1("Almaz1975").withName2("Gabdullin"));
     }
     return contactCache;
@@ -176,6 +296,9 @@ public class ContactHelper extends HelperBase {
       String firstname = element.findElement(By.xpath(".//td[3]")).getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
       contactCache.add(new ContactData().withId(id).withName1(firstname).withName2(lastname));
+=======
+      contacts.add(new ContactData().withId(id).withName1("Almaz1975").withName2("Gabdullin"));
+>>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
     }
     return new Contacts(contactCache);
   }
