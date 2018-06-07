@@ -3,13 +3,12 @@ package ru.stqa.pft.adressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.adressbook.model.GroupData;
+import ru.stqa.pft.adressbook.model.Groups;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class GroupHelper extends HelperBase{
+public class GroupHelper extends HelperBase {
 
   public GroupHelper(WebDriver wd) {
     super(wd);
@@ -38,11 +37,9 @@ public class GroupHelper extends HelperBase{
     click(By.name("delete"));
   }
 
-  public void selectGroup(int index) {
-    wd.findElements(By.name("selected[]")).get(index).click();
-    // if (!wd.findElement(By.name("selected[]")).isSelected()) {
-    //  click(By.name("selected[]"));
-    //}
+  public void selectGroupById(int id) {
+    wd.findElement(By.cssSelector("input[value= '" + id + "']")).click();
+
   }
 
   public void initGroupModification() {
@@ -53,30 +50,77 @@ public class GroupHelper extends HelperBase{
     click(By.name("update"));
   }
 
-  public void creatGroup(GroupData group) {
+  public void creat(GroupData group) {
     initGroupCreation();
     fillGroupForm(group);
     submitGroupCreation();
+    groupsCache = null;
     returnToGroupPage();
   }
 
-  public boolean isThereAggroup() {
-    return isElementPresent(By.name("selected[]"));
+  public void modify(GroupData group) {
+    selectGroupById(group.getId());
+    initGroupModification();
+    fillGroupForm(group);
+    submitGroupModification();
+    groupsCache = null;
+    returnToGroupPage();
   }
 
-  public int getGroupCount() {
+  public void delete(GroupData group) {
+    selectGroupById(group.getId());
+    deleteSelectGroups();
+    groupsCache = null;
+    returnToGroupPage();
+  }
+  public int count(){
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<GroupData> getGroupList() {
+  private Groups groupsCache = null;
+
+  public Groups all() {
+    if (groupsCache !=null) {
+      return new Groups(groupsCache);
+  }
+
+    groupsCache = new Groups();
+    List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
+    for (WebElement element : elements) {
+      String name = element.getText();
+      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+      groupsCache.add(new GroupData().withId(id).withName(name).withHeader("тест33").withHeader("тест33").withFooter("тест44"));
+    }
+    return new Groups(groupsCache);
+  }
+
+}
+/*
+*  public void delete(int index) {
+    selectGroup(index);
+    deleteSelectGroups();
+    returnToGroupPage();
+  }
+
+   public boolean isThereAggroup() {
+    return isElementPresent(By.name("selected[]"));
+  }
+
+  public int count() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
+
+   public List<GroupData> list() {
     List<GroupData> groups = new ArrayList<GroupData>();
     List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
     for (WebElement element: elements) {
       String name = element.getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      GroupData group = new GroupData(id, name, null, null, null);
-      groups.add(group);
+      groups.add(new GroupData().withId(id).withName(name));
     }
     return groups;
   }
-}
+    public void selectGroup(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
+  }
+* */
