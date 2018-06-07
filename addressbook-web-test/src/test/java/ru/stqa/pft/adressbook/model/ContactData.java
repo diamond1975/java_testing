@@ -9,8 +9,17 @@ public class ContactData {
   private String mobileHome;
   private String mobile;
   private String mobileWork;
+  private String allPhones;
   private String email1;
 
+  public String getAllPhones() {
+    return allPhones;
+  }
+
+  public ContactData withAllPhones(String allPhones) {
+    this.allPhones = allPhones;
+    return this;
+  }
 
   private String email2;
   private String email3;
