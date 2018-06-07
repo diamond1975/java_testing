@@ -7,10 +7,6 @@ import ru.stqa.pft.adressbook.model.Contacts;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-<<<<<<< HEAD
-=======
-import static org.testng.Assert.assertEquals;
->>>>>>> 3ce11643c3888347d950d188e9736960a70332ba
 
 public class ContactDeletionTests extends TestBase {
 
