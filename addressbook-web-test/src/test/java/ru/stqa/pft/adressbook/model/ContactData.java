@@ -11,6 +11,10 @@ public class ContactData {
   private String mobileWork;
   private String allPhones;
   private String email1;
+  private String email2;
+  private String email3;
+  private String allEmails;
+  private String group;
 
   public String getAllPhones() {
     return allPhones;
@@ -20,10 +24,13 @@ public class ContactData {
     this.allPhones = allPhones;
     return this;
   }
-
-  private String email2;
-  private String email3;
-  private String group;
+  public String getAllEmails() {
+    return allEmails;
+  }
+  public ContactData withAllEmails(String allEmails) {
+    this.allEmails = allEmails;
+    return this;
+  }
 
   public int getId() {
     return id;
