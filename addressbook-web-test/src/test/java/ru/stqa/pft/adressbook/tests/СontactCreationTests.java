@@ -6,7 +6,10 @@ import ru.stqa.pft.adressbook.model.ContactData;
 import ru.stqa.pft.adressbook.model.Contacts;
 import ru.stqa.pft.adressbook.model.GroupData;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,18 +21,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class СontactCreationTests extends TestBase {
 
   @DataProvider
-  public Iterator<Object []> validContact () {
+  public Iterator<Object []> validContact () throws IOException {
     List<Object []> list = new ArrayList<Object[]>();
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.csv")));
     File photo = new File("src/test/resources/stru.JPG");
-    list.add(new Object[] {new ContactData().withName1("name1").withName2 ("name2").withPhoto(photo).withAddress("address")
-    .withEmail1("email1").withEmail2("email2").withEmail3("email3").withMobileHome("MobileHome")
-    .withMobile("Mobile").withMobileWork("MobileWork").withGroup("diamind")});
-    list.add(new Object[] {new ContactData().withName1("first name3").withName2 ("last name 3").withPhoto(photo).withAddress("address 3")
-            .withEmail1("test1@yandex.ru").withEmail2("test2@yandex.ru").withEmail3("test3@yandex.ru").withMobileHome("MobileHome 2")
-            .withMobile("Mobile 2").withMobileWork("MobileWork 2").withGroup("diamind")});
-    list.add(new Object[] {new ContactData().withName1("first name 3").withName2 ("last name 3").withPhoto(photo).withAddress("address 3")
-            .withEmail1("test1@yandex.ru").withEmail2("test2@yandex.ru").withEmail3("test3@yandex.ru").withMobileHome("MobileHome 3")
-            .withMobile("Mobile 3").withMobileWork("MobileWork").withGroup("diamind")});
+    String line = reader.readLine();
+    while (line !=null){
+      String [] split = line.split(";");
+      list.add(new Object[] {new ContactData().withName1(split [0]).withName2(split[1]).withPhoto(photo)
+              .withAddress(split[2]).withMobileHome(split[3]).withMobile(split[4]).withMobileWork(split [5])
+              .withEmail1(split[6]).withEmail2(split[7]).withEmail3(split[8]).withGroup(split[9])});
+      line = reader.readLine();
+    }
     return list.iterator();
   }
 
