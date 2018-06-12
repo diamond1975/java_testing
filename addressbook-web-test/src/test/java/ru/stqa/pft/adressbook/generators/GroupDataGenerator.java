@@ -3,14 +3,13 @@ package ru.stqa.pft.adressbook.generators;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
 import ru.stqa.pft.adressbook.model.GroupData;
 
 import javax.xml.stream.XMLStreamConstants;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,10 +42,21 @@ public class GroupDataGenerator {
       saveASCsv(groups, new File(file));
     }else if(format.equals("xml")) {
       saveASXml(groups, new File(file));
+    }else if(format.equals("json")) {
+      saveASJson(groups, new File(file));
     }else{
       System.out.println("Unrecognized format" + format);
     }
   }
+
+  private void saveASJson(List<GroupData> groups, File file) throws IOException {
+    Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+    String json = gson.toJson(groups);
+    Writer writer = new FileWriter(file);
+    writer.write(json);
+    writer.close();
+  }
+
   private void saveASXml(List<GroupData> groups, File file) throws IOException {
     XStream xStream = new XStream();
     xStream.processAnnotations(GroupData.class);

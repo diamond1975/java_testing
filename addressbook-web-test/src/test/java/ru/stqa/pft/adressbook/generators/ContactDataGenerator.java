@@ -3,9 +3,10 @@ package ru.stqa.pft.adressbook.generators;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
 import ru.stqa.pft.adressbook.model.ContactData;
-import ru.stqa.pft.adressbook.model.GroupData;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -13,7 +14,6 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ContactDataGenerator {
 
@@ -45,10 +45,20 @@ public class ContactDataGenerator {
       saveASXml(contacts, new File(file));
     } else if (format.equals("xml")) {
       saveASXml(contacts, new File(file));
+    }else if(format.equals("json")) {
+      saveASJson(contacts, new File(file));
     } else {
       System.out.println("Unrecognized format" + format);
     }
   }
+  private void saveASJson(List<ContactData> contacts, File file) throws IOException {
+    Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+    String json = gson.toJson (contacts);
+    Writer writer = new FileWriter(file);
+    writer.write(json);
+    writer.close();
+  }
+
   private void saveASXml(List<ContactData> cotacts, File file) throws IOException {
     XStream xStream = new XStream();
     xStream.processAnnotations(ContactData.class);
