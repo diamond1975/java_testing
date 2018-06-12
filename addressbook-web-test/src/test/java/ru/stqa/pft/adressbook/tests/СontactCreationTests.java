@@ -1,19 +1,18 @@
 package ru.stqa.pft.adressbook.tests;
 
+import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pft.adressbook.model.ContactData;
 import ru.stqa.pft.adressbook.model.Contacts;
-import ru.stqa.pft.adressbook.model.GroupData;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -22,24 +21,24 @@ public class СontactCreationTests extends TestBase {
 
   @DataProvider
   public Iterator<Object []> validContact () throws IOException {
-    List<Object []> list = new ArrayList<Object[]>();
-    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.csv")));
-    File photo = new File("src/test/resources/stru.JPG");
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")));
+    String xml = "";
     String line = reader.readLine();
-    while (line !=null){
-      String [] split = line.split(";");
-      list.add(new Object[] {new ContactData().withName1(split [0]).withName2(split[1]).withPhoto(photo)
-              .withAddress(split[2]).withMobileHome(split[3]).withMobile(split[4]).withMobileWork(split [5])
-              .withEmail1(split[6]).withEmail2(split[7]).withEmail3(split[8]).withGroup(split[9])});
+    while (line !=null) {
+      xml += line;
       line = reader.readLine();
     }
-    return list.iterator();
+    XStream xStream = new XStream();
+    xStream.processAnnotations(ContactData.class);
+    List<ContactData> contacts = (List<ContactData>) xStream.fromXML(xml);
+    return contacts.stream().map((g)-> new Object [] {g}).collect(Collectors.toList()).iterator();
   }
 
   @Test (dataProvider = "validContact")
   public void testСontactContact(ContactData contact) {
     app.goTo().contactPage();
     Contacts before = app.contact().all();
+    //File photo = new File("src/test/resources/stru.JPG");
     app.contact().creat(contact,true);
     Contacts after = app.contact().all();
     assertThat(app.contact().count(),equalTo(before.size()+1));
