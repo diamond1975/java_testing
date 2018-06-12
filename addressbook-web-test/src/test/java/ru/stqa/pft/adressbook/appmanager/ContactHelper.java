@@ -32,6 +32,7 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.name("lastname")).clear();
     wd.findElement(By.name("lastname")).sendKeys(contactDate.getName2());
     type(By.name("nickname"), contactDate.getName3());
+    attach(By.name("photo"),contactDate.getPhoto());
     type(By.name("address"), contactDate.getAddress());
     type(By.name("home"), contactDate.getMobileHome());
     type(By.name("mobile"), contactDate.getMobile());

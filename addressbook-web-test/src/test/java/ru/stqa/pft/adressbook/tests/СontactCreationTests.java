@@ -4,6 +4,9 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.adressbook.model.ContactData;
 import ru.stqa.pft.adressbook.model.Contacts;
 
+import java.io.File;
+import java.util.concurrent.atomic.AtomicReference;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -13,7 +16,8 @@ public class СontactCreationTests extends TestBase {
   public void testСontactCreation() {
     app.goTo().contactPage();
     Contacts before = app.contact().all();
-    ContactData contact = new ContactData().withName1("Almaz1975").withName2("Gabdullin").withName3(null).withAddress("Moscow, prospect Mira, " +
+    File photo = new File("src/test/resources/stru.JPG");
+    ContactData contact = new ContactData().withName1("Almaz1975").withName2("Gabdullin").withName3(null).withPhoto(photo).withAddress("Moscow, prospect Mira, " +
             "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
             .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru")
             .withGroup("diamind").withGroup("diamind");
@@ -27,7 +31,8 @@ public class СontactCreationTests extends TestBase {
   public void testBadContactCreation() {
     app.goTo().contactPage();
     Contacts before = app.contact().all();
-    ContactData contact = new ContactData().withName1("Almaz1975'").withName2("Gabdullin").withName3(null).withAddress("Moscow, prospect Mira, " +
+    File photo = new File("src/test/resources/stru.JPG");
+    ContactData contact = new ContactData().withName1("Almaz1975'").withName2("Gabdullin").withName3(null).withPhoto(photo).withAddress("Moscow, prospect Mira, " +
             "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
             .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru")
             .withGroup("diamind").withGroup("diamind");
@@ -37,3 +42,4 @@ public class СontactCreationTests extends TestBase {
     assertThat(after,equalTo(before));
   }
 }
+
