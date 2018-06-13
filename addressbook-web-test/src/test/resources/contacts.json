@@ -46,5 +46,17 @@
     "email2": "test2@yandex.ru 3",
     "email3": "test3@yandex.ru 3",
     "group": "diamind"
+  },
+  {
+    "name1": "Gabdullin 4",
+    "name2": "Almaz 4",
+    "address": "Moscow 4",
+    "mobileHome": "112548932",
+    "mobile": "252685",
+    "mobileWork": "158322215",
+    "email1": "test@yandex.ru 4",
+    "email2": "test2@yandex.ru 4",
+    "email3": "test3@yandex.ru 4",
+    "group": "diamind"
   }
 ]
