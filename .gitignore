@@ -60,3 +60,8 @@ addressbook-web-test/.gradle/4.7/fileHashes/resourceHashesCache.bin
 addressbook-web-test/.gradle/4.7/taskHistory/taskHistory.bin
 addressbook-web-test/.gradle/4.7/taskHistory/taskHistory.lock
 addressbook-web-test/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+*.lock
+*.lock
+*.bin
+*.xml
+*.iml
