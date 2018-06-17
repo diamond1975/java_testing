@@ -1,0 +1,4 @@
+b11:34:14.435 [Test worker] INFO  r.s.p.a.tests.GroupCreationTests - Start test testGroupCreation
+a11:34:17.775 [Test worker] INFO  r.s.p.a.tests.GroupCreationTests - Stop test testGroupCreation
+b11:34:17.775 [Test worker] INFO  r.s.p.a.tests.GroupCreationTests - Start test testGroupCreation
+a11:34:21.083 [Test worker] INFO  r.s.p.a.tests.GroupCreationTests - Stop test testGroupCreation

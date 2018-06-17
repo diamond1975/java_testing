@@ -5,6 +5,7 @@ package ru.stqa.pft.adressbook.tests;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pft.adressbook.model.GroupData;
@@ -16,8 +17,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -66,6 +67,7 @@ public class GroupCreationTests extends TestBase {
     }
  @Test
   public void testGroupBadCreation() {
+  // logger.info("Start test testGroupBadCreation");
    app.goTo().groupsPage();
    Groups before = app.group().all();
    GroupData group = new GroupData().withName("diamind'").withHeader1("тест 33").withFooter("тест 44");
@@ -73,6 +75,7 @@ public class GroupCreationTests extends TestBase {
    assertThat(app.group().count(), equalTo(before.size()));
    Groups after = app.group().all();
    assertThat(after, equalTo(before));
+  // logger.info("Stop test testGroupBadCreation");
 
  }
 }
