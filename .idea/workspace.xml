@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a478476a-a4d1-4eb8-b9f4-12522b2acb74" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/DbConnectionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-test_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-test_main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-test_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-test_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -14,11 +15,11 @@
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/.gradle/4.7/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/.gradle/4.7/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/appmanager/GroupHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/appmanager/GroupHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/ContactCreationTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/ContactCreationTests$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/ContactCreationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/ContactCreationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/GroupCreationTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/GroupCreationTests$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/GroupCreationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/GroupCreationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/GroupModificationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/GroupModificationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/classes/java/test/ru/stqa/pft/adressbook/tests/TestBase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/reports/tests/testAll/classes/ru.stqa.pft.adressbook.tests.ContactCreationTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/reports/tests/testAll/classes/ru.stqa.pft.adressbook.tests.ContactCreationTests.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/reports/tests/testAll/classes/ru.stqa.pft.adressbook.tests.ContactDeletionTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/reports/tests/testAll/classes/ru.stqa.pft.adressbook.tests.ContactDeletionTests.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/reports/tests/testAll/classes/ru.stqa.pft.adressbook.tests.ContactModificationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/reports/tests/testAll/classes/ru.stqa.pft.adressbook.tests.ContactModificationTest.html" afterDir="false" />
@@ -30,12 +31,8 @@
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/test-results/testAll/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/test-results/testAll/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/test-results/testAll/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/test-results/testAll/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/build/test-results/testAll/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/build/test-results/testAll/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/tests/GroupCreationTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/tests/GroupCreationTests$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/tests/GroupCreationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/tests/GroupCreationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/tests/ContactCreationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/out/test/classes/ru/stqa/pft/adressbook/tests/ContactCreationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/ContactCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-test/tests.uml" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-test/tests.uml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sandbox/.gradle/" />
     <ignored path="$PROJECT_DIR$/sandbox/build/" />
@@ -188,54 +185,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test-20180617T113405.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113405.log">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="test-20180617T113234.log" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113234.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T125724.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T125724.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T125237.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T125237.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T125146.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T125146.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T125058.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T125058.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T125025.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T125025.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T124856.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T124856.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T113802.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113802.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="test-20180617T113646.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113646.log">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="DbConnectionTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/DbConnectionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -243,8 +211,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Gradle Kotlin DSL Build Script" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -630,9 +598,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/addressbook-web-test" value="4586627497808" />
+        <entry key="$PROJECT_DIR$/addressbook-web-test" value="4586638537495" />
         <entry key="$PROJECT_DIR$/addressbook-web-test/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/addressbook-web-test/build.gradle" value="1999047555" />
+        <entry key="$PROJECT_DIR$/addressbook-web-test/build.gradle" value="1675053517" />
         <entry key="$PROJECT_DIR$/addressbook-web-test/gradle/wrapper/gradle-wrapper.properties" value="1168256157" />
         <entry key="$PROJECT_DIR$/sandbox" value="4586655016870" />
         <entry key="$PROJECT_DIR$/sandbox/.gradle" value="0" />
@@ -992,7 +960,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/СontactCreationTests.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/TestBase1.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/ApplicationManager1.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/ApplicationManager1.java" />
@@ -1038,11 +1005,12 @@
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/GroupModificationTest.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/resources/local.properties" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/ApplicationManager.java" />
-        <option value="$PROJECT_DIR$/addressbook-web-test/build.gradle" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/ContactCreationTests.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/GroupCreationTests.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/TestBase.java" />
+        <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/ContactCreationTests.java" />
+        <option value="$PROJECT_DIR$/addressbook-web-test/build.gradle" />
+        <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/DbConnectionTest.java" />
       </list>
     </option>
   </component>
@@ -1068,10 +1036,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="144" />
-    <option name="y" value="458" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="286" />
+    <option name="y" value="301" />
+    <option name="width" value="1484" />
+    <option name="height" value="996" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1079,7 +1047,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -1283,7 +1251,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1330,7 +1298,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests">
+  <component name="RunManager" selected="TestNG.DbConnectionTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -1402,35 +1370,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="ContactDeletionTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-test_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.adressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.adressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.adressbook.tests.ContactDeletionTests" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
     <configuration name="ContactModificationTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-test_test" />
       <extension name="coverage">
@@ -1460,7 +1399,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="ContactPhoneAdressEmailTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DbConnectionTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-test_test" />
       <extension name="coverage">
         <pattern>
@@ -1472,7 +1411,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="ru.stqa.pft.adressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.adressbook.tests.ContactPhoneAdressEmailTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.adressbook.tests.DbConnectionTest" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -1540,21 +1479,50 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="ru.stqa.pft.adressbook.tests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-test_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.adressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.adressbook.tests" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
     <list>
       <item itemvalue="TestNG.C:/GitHub/java_testing/addressbook-web-test/src/test/resources/testng.xml" />
       <item itemvalue="TestNG.ContactCreationTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
-      <item itemvalue="TestNG.ContactDeletionTests" />
       <item itemvalue="TestNG.ContactModificationTest" />
-      <item itemvalue="TestNG.ContactPhoneAdressEmailTest" />
+      <item itemvalue="TestNG.ru.stqa.pft.adressbook.tests" />
+      <item itemvalue="TestNG.DbConnectionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DbConnectionTest" />
+        <item itemvalue="TestNG.ru.stqa.pft.adressbook.tests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.ContactModificationTest" />
         <item itemvalue="TestNG.ContactCreationTests" />
-        <item itemvalue="TestNG.ContactPhoneAdressEmailTest" />
-        <item itemvalue="TestNG.ContactDeletionTests" />
       </list>
     </recent_temporary>
   </component>
@@ -1623,44 +1591,45 @@
       <workItem from="1529146707137" duration="1713000" />
       <workItem from="1529148456852" duration="8936000" />
       <workItem from="1529157719071" duration="2155000" />
-      <workItem from="1529177970393" duration="21306000" />
+      <workItem from="1529177970393" duration="29759000" />
+      <workItem from="1529257930953" duration="3159000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactCreationTests - 2018.06.17 at 11h 45m 44s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 19h 32m 22s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactCreationTests - 2018.06.17 at 11h 47m 18s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 19h 35m 09s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupCreationTests - 2018.06.17 at 12h 49m 12s.xml">
-      <configuration name="GroupCreationTests" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 19h 35m 37s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupCreationTests - 2018.06.17 at 12h 50m 41s.xml">
-      <configuration name="GroupCreationTests" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 19h 36m 17s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactDeletionTests - 2018.06.17 at 12h 51m 13s.xml">
-      <configuration name="ContactDeletionTests" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 19h 39m 36s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactModificationTest - 2018.06.17 at 12h 52m 03s.xml">
-      <configuration name="ContactModificationTest" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 19h 40m 30s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactPhoneAdressEmailTest - 2018.06.17 at 12h 52m 48s.xml">
-      <configuration name="ContactPhoneAdressEmailTest" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 19h 52m 18s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactCreationTests - 2018.06.17 at 12h 57m 52s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 21h 37m 49s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactModificationTest - 2018.06.17 at 12h 58m 25s.xml">
-      <configuration name="ContactModificationTest" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 21h 42m 01s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupCreationTests - 2018.06.17 at 13h 00m 48s.xml">
-      <configuration name="GroupCreationTests" configurationId="TestNG" />
+    <history-entry file="DbConnectionTest - 2018.06.17 at 21h 42m 22s.xml">
+      <configuration name="DbConnectionTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="538151000" />
+    <option name="totallyTimeSpent" value="549763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1671,26 +1640,26 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.41774893" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50159913" side_tool="true" visible="true" weight="0.34199134" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.3283582" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32900432" />
-      <window_info anchor="bottom" x="62" y="333" width="1858" height="413" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.34199134" />
+      <window_info anchor="bottom" x="62" y="333" width="1858" height="413" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.34199134" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32900432" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.84703946" visible="true" weight="0.20095949" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.2987013" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.84539473" visible="true" weight="0.20309168" />
       <window_info anchor="right" id="Database" order="7" weight="0.21821515" />
-      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.2553305" />
+      <window_info active="true" anchor="right" id="Gradle" order="6" visible="true" weight="0.24307036" />
       <window_info id="Structure" order="1" sideWeight="0.14572865" side_tool="true" weight="0.2153518" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Favorites" order="6" sideWeight="0.15296052" side_tool="true" visible="true" weight="0.20095949" />
+      <window_info id="Favorites" order="6" sideWeight="0.15460527" side_tool="true" visible="true" weight="0.20309168" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3982103" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.2987013" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1726,20 +1695,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/Homework2/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/pft/sandbox/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/pft/sandbox/Equality.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1817,9 +1772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
           <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1900,13 +1852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/testng-contacts.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1914,29 +1859,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112342.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112237.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112105.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T111426.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112342.log" />
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112237.log" />
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112105.log" />
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T111426.log" />
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/tests.uml">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1955,6 +1881,12 @@
           </nodes>
           <notes />
           <edges>
+            <edge source="ru.stqa.pft.adressbook.tests.GroupDeletionTests" target="ru.stqa.pft.adressbook.tests.TestBase">
+              <point x="0.0" y="-37.0" />
+              <point x="403.5" y="787.0" />
+              <point x="481.75" y="787.0" />
+              <point x="-56.25" y="59.5" />
+            </edge>
             <edge source="ru.stqa.pft.adressbook.appmanager.SessionHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
               <point x="0.0" y="-37.5" />
               <point x="0.0" y="93.0" />
@@ -1964,12 +1896,6 @@
               <point x="119.5" y="211.0" />
               <point x="287.8333333333333" y="211.0" />
               <point x="-74.66666666666669" y="93.0" />
-            </edge>
-            <edge source="ru.stqa.pft.adressbook.tests.GroupDeletionTests" target="ru.stqa.pft.adressbook.tests.TestBase">
-              <point x="0.0" y="-37.0" />
-              <point x="403.5" y="787.0" />
-              <point x="481.75" y="787.0" />
-              <point x="-56.25" y="59.5" />
             </edge>
             <edge source="ru.stqa.pft.adressbook.appmanager.NavigationHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
               <point x="0.0" y="-48.5" />
@@ -1984,7 +1910,7 @@
               <point x="56.25" y="59.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0492537313432835" x="112.73399715504982" y="208.73399715504982" />
+          <settings layout="Hierarchic Group" zoom="1.0492537313432835" x="113.0" y="209.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -2005,16 +1931,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T114518.log">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/ContactCreationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="80" lean-forward="true" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2044,11 +1960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2070,20 +1981,66 @@
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T125025.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T124856.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113802.log">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113646.log">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113405.log">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T124856.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/ContactCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/GroupHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113234.log">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T113405.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/DbConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="gradleExecuteTaskHistory">

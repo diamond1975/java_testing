@@ -21,7 +21,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTests extends TestBase {
-  org.slf4j.Logger logger = LoggerFactory.getLogger(ContactCreationTests.class);
+  //org.slf4j.Logger logger = LoggerFactory.getLogger(ContactCreationTests.class);
 
   @DataProvider
   public Iterator<Object []> validContactFromXml () throws IOException {
@@ -55,7 +55,7 @@ public class ContactCreationTests extends TestBase {
   }
   @Test (dataProvider = "validContactFromJson")
   public void testСontactContact(ContactData contact) {
-    logger.info("Start test testСontactContact");
+    //logger.info("Start test testСontactContact");
     app.goTo().contactPage();
     Contacts before = app.contact().all();
     //File photo = new File("src/test/resources/stru.JPG");
@@ -64,11 +64,11 @@ public class ContactCreationTests extends TestBase {
     assertThat(app.contact().count(),equalTo(before.size()+1));
     assertThat(after,equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((g)-> g.getId()).max().getAsInt()))));
-    logger.info("Stop test testСontactContact");
+    //logger.info("Stop test testСontactContact");
   }
   @Test
   public void testBadContactCreation() {
-    logger.info("Start test testBadContactCreation");
+    //logger.info("Start test testBadContactCreation");
     app.goTo().contactPage();
     Contacts before = app.contact().all();
     File photo = new File("src/test/resources/stru.JPG");
@@ -80,7 +80,7 @@ public class ContactCreationTests extends TestBase {
     assertThat(app.contact().count(),equalTo(before.size()));
     Contacts after = app.contact().all();
     assertThat(after,equalTo(before));
-    logger.info("Stop test testBadContactCreation");
+    //logger.info("Stop test testBadContactCreation");
   }
 
 
