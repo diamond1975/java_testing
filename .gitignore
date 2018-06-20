@@ -3,8 +3,6 @@
 .idea/workspace.xml
 .idea/workspace.xml
 .idea/workspace.xml
-*.xml
-*.log
 addressbook-web-test/build/tmp/testAll/jar_extract_4027288612528246751_tmp
 addressbook-web-test/build/tmp/testAll/jar_extract_4193007828380198246_tmp
 addressbook-web-test/build/tmp/testAll/jar_extract_5414185091274156500_tmp
