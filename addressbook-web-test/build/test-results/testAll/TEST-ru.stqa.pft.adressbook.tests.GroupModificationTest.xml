@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.pft.adressbook.tests.GroupModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-20T08:27:25" hostname="DESKTOP-C1KL42Q" time="0.949">
+<testsuite name="ru.stqa.pft.adressbook.tests.GroupModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-20T18:29:47" hostname="DESKTOP-UT1S4OG" time="3.784">
   <properties/>
-  <testcase name="testGroupModification" classname="ru.stqa.pft.adressbook.tests.GroupModificationTest" time="0.949"/>
-  <system-out><![CDATA[11:27:25.686 [Test worker] INFO  r.stqa.pft.adressbook.tests.TestBase - Start test testGroupModification with parametrs []
+  <testcase name="testGroupModification" classname="ru.stqa.pft.adressbook.tests.GroupModificationTest" time="3.784"/>
+  <system-out><![CDATA[21:29:47.063 [Test worker] INFO  r.stqa.pft.adressbook.tests.TestBase - Start test testGroupModification with parametrs []
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

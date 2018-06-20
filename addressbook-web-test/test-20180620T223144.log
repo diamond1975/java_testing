@@ -1,0 +1,6 @@
+4080 [main] INFO  r.s.pft.adressbook.tests.TestBase - Start test testBadContactCreation with parametrs []
+18248 [main] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testBadContactCreation
+18279 [main] INFO  r.s.pft.adressbook.tests.TestBase - Start test testСontactContact with parametrs [ContactData{id='2147483647', name1='Gabdullin 0', name2='Almaz 0'}]
+26338 [main] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testСontactContact
+26338 [main] INFO  r.s.pft.adressbook.tests.TestBase - Start test testСontactContact with parametrs [ContactData{id='2147483647', name1='Gabdullin 1', name2='Almaz 1'}]
+33985 [main] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testСontactContact

@@ -1,0 +1,20 @@
+4119 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test testGroupBadCreation with parametrs []
+11343 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testGroupBadCreation
+11365 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test testGroupCreation with parametrs [GroupData{id='2147483647', name='test 0'}]
+15422 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testGroupCreation
+15422 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test testGroupCreation with parametrs [GroupData{id='2147483647', name='test 1'}]
+19517 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testGroupCreation
+19517 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test testGroupModification with parametrs []
+23474 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testGroupModification
+23474 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test tesrGroupDeletion with parametrs []
+26938 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test tesrGroupDeletion
+26938 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test testBadContactCreation with parametrs []
+40767 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testBadContactCreation
+40767 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test test—ontactContact with parametrs [ContactData{id='2147483647', name1='Gabdullin 0', name2='Almaz 0'}]
+48549 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test test—ontactContact
+48549 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test test—ontactContact with parametrs [ContactData{id='2147483647', name1='Gabdullin 1', name2='Almaz 1'}]
+56401 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test test—ontactContact
+56402 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test testContactModification with parametrs []
+64291 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testContactModification
+64292 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Start test testsContactDeletion with parametrs []
+70612 [Test worker] INFO  r.s.pft.adressbook.tests.TestBase - Stop test testsContactDeletion
