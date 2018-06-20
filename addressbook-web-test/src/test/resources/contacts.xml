@@ -1,0 +1,50 @@
+<list>
+  <contact>
+    <name1>Gabdullin 0</name1>
+    <name2>Almaz 0</name2>
+    <address>Moscow 0</address>
+    <mobileHome>112548932</mobileHome>
+    <mobile>252685</mobile>
+    <mobileWork>158322215</mobileWork>
+    <email1>test@yandex.ru 0</email1>
+    <email2>test2@yandex.ru 0</email2>
+    <email3>test3@yandex.ru 0</email3>
+    <group>diamind</group>
+  </contact>
+  <contact>
+    <name1>Gabdullin 1</name1>
+    <name2>Almaz 1</name2>
+    <address>Moscow 1</address>
+    <mobileHome>112548932</mobileHome>
+    <mobile>252685</mobile>
+    <mobileWork>158322215</mobileWork>
+    <email1>test@yandex.ru 1</email1>
+    <email2>test2@yandex.ru 1</email2>
+    <email3>test3@yandex.ru 1</email3>
+    <group>diamind</group>
+  </contact>
+  <contact>
+    <name1>Gabdullin 2</name1>
+    <name2>Almaz 2</name2>
+    <address>Moscow 2</address>
+    <mobileHome>112548932</mobileHome>
+    <mobile>252685</mobile>
+    <mobileWork>158322215</mobileWork>
+    <email1>test@yandex.ru 2</email1>
+    <email2>test2@yandex.ru 2</email2>
+    <email3>test3@yandex.ru 2</email3>
+    <group>diamind</group>
+  </contact>
+  <contact>
+    <name1>Gabdullin 3</name1>
+    <name2>Almaz 3</name2>
+    <address>Moscow 3</address>
+    <mobileHome>112548932</mobileHome>
+    <mobile>252685</mobile>
+    <mobileWork>158322215</mobileWork>
+    <email1>test@yandex.ru 3</email1>
+    <email2>test2@yandex.ru 3</email2>
+    <email3>test3@yandex.ru 3</email3>
+    <group>diamind</group>
+  </contact>
+</list>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.adressbook.tests.ContactModificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-20T08:27:40" hostname="DESKTOP-C1KL42Q" time="3.55">
+  <properties/>
+  <testcase name="testContactModification" classname="ru.stqa.pft.adressbook.tests.ContactModificationTest" time="3.55"/>
+  <system-out><![CDATA[11:27:40.905 [Test worker] INFO  r.stqa.pft.adressbook.tests.TestBase - Start test testContactModification with parametrs []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

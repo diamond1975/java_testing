@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.adressbook.tests.ContactCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-06-20T08:27:27" hostname="DESKTOP-C1KL42Q" time="13.456">
+  <properties/>
+  <testcase name="testBadContactCreation" classname="ru.stqa.pft.adressbook.tests.ContactCreationTests" time="6.454"/>
+  <testcase name="testСontactContact[0](ContactData{id='2147483647', name1='Gabdullin 0', name2='Almaz 0'})" classname="ru.stqa.pft.adressbook.tests.ContactCreationTests" time="3.262"/>
+  <testcase name="testСontactContact[1](ContactData{id='2147483647', name1='Gabdullin 1', name2='Almaz 1'})" classname="ru.stqa.pft.adressbook.tests.ContactCreationTests" time="3.669"/>
+  <system-out><![CDATA[11:27:27.448 [Test worker] INFO  r.stqa.pft.adressbook.tests.TestBase - Start test testBadContactCreation with parametrs []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

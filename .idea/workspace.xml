@@ -179,15 +179,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/ApplicationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ContactHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/ContactHelper.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -221,7 +212,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HbConnectionTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HbConnectionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/HbConnectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
@@ -233,50 +224,124 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/HelperBase.java">
+      <file leaf-file-name="test-20180620T112701.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180620T112701.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contacts.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/contacts.json">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="-340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groups.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/groups.csv">
-          <provider selected="true" editor-type-id="text-editor">
+      <file leaf-file-name="tests.uml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/tests.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
-              <caret column="4" selection-start-column="4" selection-end-column="4" />
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="260.0" y="0.0">ru.stqa.pft.adressbook.appmanager.HelperBase</node>
+                <node x="757.0" y="0.0">ru.stqa.pft.adressbook.model.GroupData</node>
+                <node x="0.0" y="900.0">ru.stqa.pft.adressbook.tests.GroupDeletionTests</node>
+                <node x="0.0" y="236.0">ru.stqa.pft.adressbook.appmanager.GroupHelper</node>
+                <node x="259.0" y="368.5">ru.stqa.pft.adressbook.appmanager.NavigationHelper</node>
+                <node x="111.5" y="643.0">ru.stqa.pft.adressbook.tests.TestBase</node>
+                <node x="505.0" y="379.5">ru.stqa.pft.adressbook.appmanager.SessionHelper</node>
+                <node x="229.0" y="878.0">ru.stqa.pft.adressbook.tests.GroupCreationTests</node>
+                <node x="563.0" y="643.0">ru.stqa.pft.adressbook.appmanager.ApplicationManager</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="ru.stqa.pft.adressbook.appmanager.SessionHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
+                  <point x="0.0" y="-37.5" />
+                  <point x="608.5" y="211.0" />
+                  <point x="446.6666666666667" y="211.0" />
+                  <point x="74.66666666666669" y="93.0" />
+                </edge>
+                <edge source="ru.stqa.pft.adressbook.appmanager.GroupHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
+                  <point x="0.0" y="-181.0" />
+                  <point x="119.5" y="211.0" />
+                  <point x="297.3333333333333" y="211.0" />
+                  <point x="-74.66666666666669" y="93.0" />
+                </edge>
+                <edge source="ru.stqa.pft.adressbook.tests.GroupDeletionTests" target="ru.stqa.pft.adressbook.tests.TestBase">
+                  <point x="0.0" y="-37.0" />
+                  <point x="104.5" y="853.0" />
+                  <point x="175.25" y="853.0" />
+                  <point x="-63.75" y="92.5" />
+                </edge>
+                <edge source="ru.stqa.pft.adressbook.appmanager.NavigationHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
+                  <point x="0.0" y="-48.5" />
+                  <point x="0.0" y="93.0" />
+                </edge>
+                <edge source="ru.stqa.pft.adressbook.tests.GroupCreationTests" target="ru.stqa.pft.adressbook.tests.TestBase">
+                  <point x="0.0" y="-59.0" />
+                  <point x="373.5" y="853.0" />
+                  <point x="302.75" y="853.0" />
+                  <point x="63.75" y="92.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.5942915392456677" x="32.26415094339626" y="393.84219554030875" />
+              <SelectedNodes>
+                <node>ru.stqa.pft.adressbook.appmanager.HelperBase</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/GroupHelper.java">
+      <file leaf-file-name="gradlew.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/gradlew.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/model/GroupData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+      <file leaf-file-name="gradlew" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/gradlew">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="contact.uml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook-web-test/contact.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="352.0" y="0.0">ru.stqa.pft.adressbook.tests.ContactDeletionTests</node>
+                <node x="0.0" y="0.0">ru.stqa.pft.adressbook.appmanager.ContactHelper</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-56.0" y="306.5" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -1035,7 +1100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/ApplicationManager1.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/SessionHelper1.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/TestBase1.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/NavigationHelper1.java" />
@@ -1086,6 +1150,7 @@
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/DbConnectionTest.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/HbConnectionTest.java" />
         <option value="$PROJECT_DIR$/addressbook-web-test/src/test/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/addressbook-web-test/gradlew.bat" />
       </list>
     </option>
   </component>
@@ -1110,7 +1175,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-37" />
     <option name="y" value="-8" />
     <option name="width" value="1484" />
@@ -1609,17 +1674,11 @@
       <workItem from="1529157719071" duration="2155000" />
       <workItem from="1529177970393" duration="29759000" />
       <workItem from="1529257930953" duration="9617000" />
-      <workItem from="1529483015930" duration="912000" />
+      <workItem from="1529483015930" duration="1501000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DbConnectionTest - 2018.06.17 at 23h 11m 52s.xml">
-      <configuration name="DbConnectionTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HbConnectionTest - 2018.06.17 at 23h 30m 33s.xml">
-      <configuration name="HbConnectionTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="HbConnectionTest - 2018.06.17 at 23h 35m 52s.xml">
       <configuration name="HbConnectionTest" configurationId="TestNG" />
     </history-entry>
@@ -1644,12 +1703,19 @@
     <history-entry file="HbConnectionTest - 2018.06.20 at 11h 29m 22s.xml">
       <configuration name="HbConnectionTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="C__GitHub_java_testing_addressbook-web-test_src_test_resources_testng-groups_xml - 2018.06.20 at 11h 39m 13s.xml">
+      <configuration name="C:/GitHub/java_testing/addressbook-web-test/src/test/resources/testng-groups.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactCreationTests - 2018.06.20 at 11h 40m 10s.xml">
+      <configuration name="ContactCreationTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557165000" />
+    <option name="totallyTimeSpent" value="557754000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021322" side_tool="true" weight="0.35281384" />
@@ -1714,22 +1780,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/generators/ContactDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/model/Contacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/contacts.xml" />
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/testng-all.xml" />
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/generators/GroupDataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-272">
@@ -1758,65 +1808,6 @@
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112237.log" />
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T112105.log" />
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T111426.log" />
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/tests.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="250.5" y="0.0">ru.stqa.pft.adressbook.appmanager.HelperBase</node>
-            <node x="757.0" y="0.0">ru.stqa.pft.adressbook.model.GroupData</node>
-            <node x="299.0" y="845.5">ru.stqa.pft.adressbook.tests.GroupDeletionTests</node>
-            <node x="0.0" y="236.0">ru.stqa.pft.adressbook.appmanager.GroupHelper</node>
-            <node x="486.0" y="368.5">ru.stqa.pft.adressbook.appmanager.NavigationHelper</node>
-            <node x="425.5" y="643.0">ru.stqa.pft.adressbook.tests.TestBase</node>
-            <node x="259.0" y="379.5">ru.stqa.pft.adressbook.appmanager.SessionHelper</node>
-            <node x="528.0" y="812.0">ru.stqa.pft.adressbook.tests.GroupCreationTests</node>
-            <node x="0.0" y="643.0">ru.stqa.pft.adressbook.appmanager.ApplicationManager</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="ru.stqa.pft.adressbook.tests.GroupDeletionTests" target="ru.stqa.pft.adressbook.tests.TestBase">
-              <point x="0.0" y="-37.0" />
-              <point x="403.5" y="787.0" />
-              <point x="481.75" y="787.0" />
-              <point x="-56.25" y="59.5" />
-            </edge>
-            <edge source="ru.stqa.pft.adressbook.appmanager.SessionHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
-              <point x="0.0" y="-37.5" />
-              <point x="0.0" y="93.0" />
-            </edge>
-            <edge source="ru.stqa.pft.adressbook.appmanager.GroupHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
-              <point x="0.0" y="-181.0" />
-              <point x="119.5" y="211.0" />
-              <point x="287.8333333333333" y="211.0" />
-              <point x="-74.66666666666669" y="93.0" />
-            </edge>
-            <edge source="ru.stqa.pft.adressbook.appmanager.NavigationHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
-              <point x="0.0" y="-48.5" />
-              <point x="599.0" y="211.0" />
-              <point x="437.1666666666667" y="211.0" />
-              <point x="74.66666666666669" y="93.0" />
-            </edge>
-            <edge source="ru.stqa.pft.adressbook.tests.GroupCreationTests" target="ru.stqa.pft.adressbook.tests.TestBase">
-              <point x="0.0" y="-70.5" />
-              <point x="672.5" y="787.0" />
-              <point x="594.25" y="787.0" />
-              <point x="56.25" y="59.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0492537313432835" x="113.0" y="209.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T114518.log" />
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/tests/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1899,13 +1890,6 @@
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T235942.log" />
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/resources/logback.xml" />
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180617T235356.log" />
-    <entry file="file://$PROJECT_DIR$/addressbook-web-test/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-test/src/test/java/ru/stqa/pft/adressbook/appmanager/SessionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1999,6 +1983,116 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/tests.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="260.0" y="0.0">ru.stqa.pft.adressbook.appmanager.HelperBase</node>
+            <node x="757.0" y="0.0">ru.stqa.pft.adressbook.model.GroupData</node>
+            <node x="0.0" y="900.0">ru.stqa.pft.adressbook.tests.GroupDeletionTests</node>
+            <node x="0.0" y="236.0">ru.stqa.pft.adressbook.appmanager.GroupHelper</node>
+            <node x="259.0" y="368.5">ru.stqa.pft.adressbook.appmanager.NavigationHelper</node>
+            <node x="111.5" y="643.0">ru.stqa.pft.adressbook.tests.TestBase</node>
+            <node x="505.0" y="379.5">ru.stqa.pft.adressbook.appmanager.SessionHelper</node>
+            <node x="229.0" y="878.0">ru.stqa.pft.adressbook.tests.GroupCreationTests</node>
+            <node x="563.0" y="643.0">ru.stqa.pft.adressbook.appmanager.ApplicationManager</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="ru.stqa.pft.adressbook.appmanager.SessionHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
+              <point x="0.0" y="-37.5" />
+              <point x="608.5" y="211.0" />
+              <point x="446.6666666666667" y="211.0" />
+              <point x="74.66666666666669" y="93.0" />
+            </edge>
+            <edge source="ru.stqa.pft.adressbook.appmanager.GroupHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
+              <point x="0.0" y="-181.0" />
+              <point x="119.5" y="211.0" />
+              <point x="297.3333333333333" y="211.0" />
+              <point x="-74.66666666666669" y="93.0" />
+            </edge>
+            <edge source="ru.stqa.pft.adressbook.tests.GroupDeletionTests" target="ru.stqa.pft.adressbook.tests.TestBase">
+              <point x="0.0" y="-37.0" />
+              <point x="104.5" y="853.0" />
+              <point x="175.25" y="853.0" />
+              <point x="-63.75" y="92.5" />
+            </edge>
+            <edge source="ru.stqa.pft.adressbook.appmanager.NavigationHelper" target="ru.stqa.pft.adressbook.appmanager.HelperBase">
+              <point x="0.0" y="-48.5" />
+              <point x="0.0" y="93.0" />
+            </edge>
+            <edge source="ru.stqa.pft.adressbook.tests.GroupCreationTests" target="ru.stqa.pft.adressbook.tests.TestBase">
+              <point x="0.0" y="-59.0" />
+              <point x="373.5" y="853.0" />
+              <point x="302.75" y="853.0" />
+              <point x="63.75" y="92.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5942915392456677" x="32.26415094339626" y="393.84219554030875" />
+          <SelectedNodes>
+            <node>ru.stqa.pft.adressbook.appmanager.HelperBase</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/test-20180620T112701.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/contact.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="352.0" y="0.0">ru.stqa.pft.adressbook.tests.ContactDeletionTests</node>
+            <node x="0.0" y="0.0">ru.stqa.pft.adressbook.appmanager.ContactHelper</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-56.0" y="306.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-web-test/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

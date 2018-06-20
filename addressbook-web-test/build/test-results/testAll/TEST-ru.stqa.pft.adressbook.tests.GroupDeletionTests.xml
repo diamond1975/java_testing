@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.adressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-20T08:27:26" hostname="DESKTOP-C1KL42Q" time="0.603">
+  <properties/>
+  <testcase name="tesrGroupDeletion" classname="ru.stqa.pft.adressbook.tests.GroupDeletionTests" time="0.603"/>
+  <system-out><![CDATA[11:27:26.742 [Test worker] INFO  r.stqa.pft.adressbook.tests.TestBase - Start test tesrGroupDeletion with parametrs []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
