@@ -26,8 +26,8 @@ public class GroupData {
   @Column (name = "group_header")
   @Type(type = "text")
   private String header;
-  @Expose
-  private String header1;
+
+  //private String header1;
   @Expose
   @Column (name = "group_footer")
   @Type(type = "text")
@@ -55,10 +55,10 @@ public class GroupData {
     return this;
   }
 
-  public GroupData withHeader1(String header1) {
-    this.header1 = header1;
-    return this;
-  }
+ // public GroupData withHeader1(String header1) {
+    //this.header1 = header1;
+    //return this;
+  //}
 
   public GroupData withFooter(String footer) {
     this.footer = footer;
@@ -68,9 +68,9 @@ public class GroupData {
     return header;
   }
 
-  public String getHeader1() {
-    return header1;
-  }
+  //public String getHeader1() {
+   // return header1;
+  //}
 
   public String getFooter() {
     return footer;
