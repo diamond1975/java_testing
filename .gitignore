@@ -65,3 +65,8 @@ addressbook-web-test/.gradle/buildOutputCleanup/buildOutputCleanup.lock
 *.bin
 *.xml
 *.iml
+надо в файле .gitignore вот эти строчки
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+перенести в конец (ну или по крайней мере после строки
+*.jar
