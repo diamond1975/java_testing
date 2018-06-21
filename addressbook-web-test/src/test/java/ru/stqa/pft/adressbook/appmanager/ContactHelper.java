@@ -143,7 +143,9 @@ public class ContactHelper extends HelperBase {
     //WebElement row = checkbox.findElement(By.xpath("./../.."));
     //List <WebElement> cells = row.findElements(By.tagName("td"));
     //cells.get(7).findElement((By.tagName("a")).click();
-    wd.findElement(By.xpath("//*[@href='edit.php?id=" + id + "']")).click();
+     wd.findElement(By.xpath("//*[@href='edit.php?id=" + id + "']")).click();
+      // wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+
     //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
     //click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img");
     //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
