@@ -67,15 +67,12 @@ public class GroupCreationTests extends TestBase {
     }
  @Test
   public void testGroupBadCreation() {
-  // logger.info("Start test testGroupBadCreation");
    app.goTo().groupsPage();
    Groups before = app.db().groups();
-   GroupData group = new GroupData().withName("diamind'").withHeader("тест 33").withFooter("тест 44");
+   GroupData group = new GroupData().withName("diamind'").withHeader("тест 22").withFooter("тест 44");
    app.group().creat(group);
    assertThat(app.group().count(), equalTo(before.size()));
    Groups after = app.db().groups();
    assertThat(after, equalTo(before));
-  // logger.info("Stop test testGroupBadCreation");
-
  }
 }
