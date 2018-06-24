@@ -89,7 +89,7 @@ public class GroupHelper extends HelperBase {
     for (WebElement element : elements) {
       String name = element.getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      groupsCache.add(new GroupData().withId(id).withName(name).withHeader("тест22").withFooter("тест44"));
+      groupsCache.add(new GroupData().withId(id).withName(name).withHeader("тест33").withHeader("тест33").withFooter("тест44"));
     }
     return new Groups(groupsCache);
   }

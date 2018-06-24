@@ -15,38 +15,38 @@ public class ContactData {
 
   @XStreamOmitField
   @Id
-  @Column(name = "id")
+  @Column (name = "id")
   private int id = Integer.MAX_VALUE;
 
   @Expose
-  @Column(name = "firstname")
+  @Column (name = "firstname")
   private String name1;
 
   @Expose
-  @Column(name = "lastname")
+  @Column (name = "lastname")
   private String name2;
 
   @Expose
-  @Column(name = "nickname")
+  @Column (name = "nickname")
   private String name3;
 
   @Expose
-  @Column(name = "address")
+  @Column (name = "address")
   @Type(type = "text")
   private String address;
 
   @Expose
-  @Column(name = "home")
+  @Column (name = "home")
   @Type(type = "text")
   private String mobileHome;
 
   @Expose
-  @Column(name = "mobile")
+  @Column (name = "mobile")
   @Type(type = "text")
   private String mobile;
 
   @Expose
-  @Column(name = "work")
+  @Column (name = "work")
   @Type(type = "text")
   private String mobileWork;
 
@@ -55,17 +55,17 @@ public class ContactData {
   private String allPhones;
 
   @Expose
-  @Column(name = "email")
+  @Column (name = "email")
   @Type(type = "text")
   private String email1;
 
   @Expose
-  @Column(name = "email2")
+  @Column (name = "email2")
   @Type(type = "text")
   private String email2;
 
   @Expose
-  @Column(name = "email3")
+  @Column (name = "email3")
   @Type(type = "text")
   private String email3;
 
@@ -78,13 +78,13 @@ public class ContactData {
   private String group;
 
   @Expose
-  @Column(name = "photo")
+  @Column (name = "photo")
   @Type(type = "text")
   @Transient
   private String photo = "src/tests/resources/stru.jpg";
 
   public File getPhoto() {
-    return new File(photo);
+    return new File (photo);
   }
 
   public ContactData withPhoto(File photo) {
@@ -100,11 +100,9 @@ public class ContactData {
     this.allPhones = allPhones;
     return this;
   }
-
   public String getAllEmails() {
     return allEmails;
   }
-
   public ContactData withAllEmails(String allEmails) {
     this.allEmails = allEmails;
     return this;
@@ -236,9 +234,11 @@ public class ContactData {
     if (mobileWork != null ? !mobileWork.equals(that.mobileWork) : that.mobileWork != null) return false;
     if (email1 != null ? !email1.equals(that.email1) : that.email1 != null) return false;
     if (email2 != null ? !email2.equals(that.email2) : that.email2 != null) return false;
-    return (email3 != null ? !email3.equals(that.email3) : that.email3 != null);
-
+    if (email3 != null ? !email3.equals(that.email3) : that.email3 != null) return false;
+    if (group != null ? !group.equals(that.group) : that.group != null) return false;
+    return photo != null ? photo.equals(that.photo) : that.photo == null;
   }
+
 
   @Override
   public int hashCode() {
