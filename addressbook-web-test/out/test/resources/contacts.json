@@ -2,6 +2,7 @@
   {
     "name1": "Gabdullin 0",
     "name2": "Almaz 0",
+    "name3": "Almazon 0",
     "address": "Moscow 0",
     "mobileHome": "112548932",
     "mobile": "252685",
@@ -9,11 +10,13 @@
     "email1": "test@yandex.ru 0",
     "email2": "test2@yandex.ru 0",
     "email3": "test3@yandex.ru 0",
-    "group": "diamind"
+    "group": "diamind",
+    "photo": "src/tests/resources/stru.jpg"
   },
   {
     "name1": "Gabdullin 1",
     "name2": "Almaz 1",
+    "name3": "Almazon 1",
     "address": "Moscow 1",
     "mobileHome": "112548932",
     "mobile": "252685",
@@ -21,6 +24,7 @@
     "email1": "test@yandex.ru 1",
     "email2": "test2@yandex.ru 1",
     "email3": "test3@yandex.ru 1",
-    "group": "diamind"
+    "group": "diamind",
+    "photo": "src/tests/resources/stru.jpg"
   }
 ]

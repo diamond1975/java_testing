@@ -63,3 +63,5 @@ addressbook-web-test/.gradle/buildOutputCleanup/buildOutputCleanup.lock
 !gradle-wrapper.jar
 перенести в конец (ну или по крайней мере после строки
 *.jar
+*.class
+*.class

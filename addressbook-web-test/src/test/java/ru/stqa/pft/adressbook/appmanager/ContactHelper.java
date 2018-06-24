@@ -22,7 +22,7 @@ public class ContactHelper extends HelperBase {
     click(By.linkText("home"));
   }
 
-  public void submitContactCreation() {
+  public void submitContactCreation(){
     click(By.name("submit"));
   }
 
@@ -32,7 +32,7 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.name("lastname")).clear();
     wd.findElement(By.name("lastname")).sendKeys(contactDate.getName2());
     type(By.name("nickname"), contactDate.getName3());
-    attach(By.name("photo"),contactDate.getPhoto());
+    //attach(By.name("photo"),contactDate.getPhoto());
     type(By.name("address"), contactDate.getAddress());
     type(By.name("home"), contactDate.getMobileHome());
     type(By.name("mobile"), contactDate.getMobile());
@@ -57,8 +57,10 @@ public class ContactHelper extends HelperBase {
     wd.switchTo().alert().accept();
   }
 
+
   public void selectContactsById(int id) {
     wd.findElement(By.cssSelector("input[value= '" + id + "']")).click();
+
   }
 
   public void submitContactModification() {
@@ -143,9 +145,11 @@ public class ContactHelper extends HelperBase {
     //WebElement row = checkbox.findElement(By.xpath("./../.."));
     //List <WebElement> cells = row.findElements(By.tagName("td"));
     //cells.get(7).findElement((By.tagName("a")).click();
-     wd.findElement(By.xpath("//*[@href='edit.php?id=" + id + "']")).click();
-      // wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
-
+    //wd.findElement(By.xpath(String.format("//input[@value='%s']/../../td[8]/a", id))).click();
+    wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    //click(By.cssSelector(String.format("a[href^='edit.php?id=%s']", id)));
+     //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+      //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
     //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
     //click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img");
     //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();

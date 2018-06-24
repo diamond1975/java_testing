@@ -3,11 +3,12 @@ import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import org.hibernate.annotations.Type;
+import org.testng.annotations.DataProvider;
 
 import javax.persistence.*;
 import java.io.File;
-@XStreamAlias("contact")
 
+@XStreamAlias("contact")
 @Entity
 @Table (name = "addressbook")
 public class ContactData {
@@ -20,27 +21,6 @@ public class ContactData {
   @Expose
   @Column (name = "firstname")
   private String name1;
-
-  @Override
-  public String toString() {
-    return "ContactData{" +
-            "id=" + id +
-            ", name1='" + name1 + '\'' +
-            ", name2='" + name2 + '\'' +
-            ", name3='" + name3 + '\'' +
-            ", address='" + address + '\'' +
-            ", mobileHome='" + mobileHome + '\'' +
-            ", mobile='" + mobile + '\'' +
-            ", mobileWork='" + mobileWork + '\'' +
-            ", allPhones='" + allPhones + '\'' +
-            ", email1='" + email1 + '\'' +
-            ", email2='" + email2 + '\'' +
-            ", email3='" + email3 + '\'' +
-            ", allEmails='" + allEmails + '\'' +
-            ", group='" + group + '\'' +
-            ", photo='" + photo + '\'' +
-            '}';
-  }
 
   @Expose
   @Column (name = "lastname")
@@ -100,6 +80,7 @@ public class ContactData {
   @Expose
   @Column (name = "photo")
   @Type(type = "text")
+  @Transient
   private String photo = "src/tests/resources/stru.jpg";
 
   public File getPhoto() {
@@ -110,7 +91,6 @@ public class ContactData {
     this.photo = photo.getPath();
     return this;
   }
-
 
   public String getAllPhones() {
     return allPhones;
@@ -246,14 +226,50 @@ public class ContactData {
 
     if (id != that.id) return false;
     if (name1 != null ? !name1.equals(that.name1) : that.name1 != null) return false;
-    return name2 != null ? name2.equals(that.name2) : that.name2 == null;
+    if (name2 != null ? !name2.equals(that.name2) : that.name2 != null) return false;
+    if (name3 != null ? !name3.equals(that.name3) : that.name3 != null) return false;
+    if (address != null ? !address.equals(that.address) : that.address != null) return false;
+    if (mobileHome != null ? !mobileHome.equals(that.mobileHome) : that.mobileHome != null) return false;
+    if (mobile != null ? !mobile.equals(that.mobile) : that.mobile != null) return false;
+    if (mobileWork != null ? !mobileWork.equals(that.mobileWork) : that.mobileWork != null) return false;
+    if (email1 != null ? !email1.equals(that.email1) : that.email1 != null) return false;
+    if (email2 != null ? !email2.equals(that.email2) : that.email2 != null) return false;
+    if (email3 != null ? !email3.equals(that.email3) : that.email3 != null) return false;
+    if (group != null ? !group.equals(that.group) : that.group != null) return false;
+    return photo != null ? photo.equals(that.photo) : that.photo == null;
   }
+
 
   @Override
   public int hashCode() {
     int result = id;
     result = 31 * result + (name1 != null ? name1.hashCode() : 0);
     result = 31 * result + (name2 != null ? name2.hashCode() : 0);
+    result = 31 * result + (name3 != null ? name3.hashCode() : 0);
+    result = 31 * result + (address != null ? address.hashCode() : 0);
+    result = 31 * result + (mobileHome != null ? mobileHome.hashCode() : 0);
+    result = 31 * result + (mobile != null ? mobile.hashCode() : 0);
+    result = 31 * result + (mobileWork != null ? mobileWork.hashCode() : 0);;
+    result = 31 * result + (email1 != null ? email1.hashCode() : 0);
+    result = 31 * result + (email2 != null ? email2.hashCode() : 0);
+    result = 31 * result + (email3 != null ? email3.hashCode() : 0);
     return result;
   }
+  @Override
+  public String toString() {
+    return "ContactData{" +
+            "id=" + id +
+            ", name1='" + name1 + '\'' +
+            ", name2='" + name2 + '\'' +
+            ", name3='" + name3 + '\'' +
+            ", address='" + address + '\'' +
+            ", mobileHome='" + mobileHome + '\'' +
+            ", mobile='" + mobile + '\'' +
+            ", mobileWork='" + mobileWork + '\'' +
+            ", email1='" + email1 + '\'' +
+            ", email2='" + email2 + '\'' +
+            ", email3='" + email3 + '\'' +
+            '}';
+  }
+
 }

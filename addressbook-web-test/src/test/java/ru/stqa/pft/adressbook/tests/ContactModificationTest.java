@@ -12,10 +12,10 @@ public class ContactModificationTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (app.db().contacts().size() == 0) {
-            app.goTo().contactPage();
-            if (app.contact().all().size() == 0)
-                app.contact().creat(new ContactData().withName1("Almaz1975").withName2("Gabdullin").withName3("Almazon").withAddress("Moscow, prospect Mira, " +
+      app.goTo().contactPage();
+        if (app.db().contacts().size() == 0) { //Условие, если  n=0
+                app.contact().creat(new ContactData().withName1("Almaz1988").withName2("Gabdullin").withName3("Almazon")
+                        .withPhoto(new java.io.File("photo")).withAddress("Moscow, prospect Mira, " +
                         "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
                         .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru")
                         .withGroup("diamind"), true);
@@ -24,13 +24,13 @@ public class ContactModificationTest extends TestBase {
 
     @Test
     public void testContactModification() {
+      app.goTo().contactPage();
         Contacts before = app.db().contacts();
         ContactData modifiedContact = before.iterator().next();
         ContactData contact = new ContactData()
-                .withId(modifiedContact.getId()).withName1("Almaz1975").withName2("Gabdullin").withName3("Almazon").withAddress("Moscow, prospect Mira, " +
+                .withId(modifiedContact.getId()).withName1("Almaz1999").withName2("Gabdullin").withName3("Almazon").withAddress("Moscow, prospect Mira, " +
                         "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
-                .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru").withGroup("diamind");
-        app.goTo().contactPage();
+                .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru");
         app.contact().modify(contact);
         //assertThat(app.contact(),equalTo(before.size()));Contacts after = app.db().contacts();Contacts after = app.db().contacts();
         assertThat(app.contact().count(), equalTo(before.size()));

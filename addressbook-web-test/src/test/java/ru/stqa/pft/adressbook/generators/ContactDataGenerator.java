@@ -73,7 +73,7 @@ public class ContactDataGenerator {
     System.out.println(new File(".").getAbsolutePath());
     try (Writer writer = new FileWriter(file)) {
       for (ContactData contact : contacts) {
-        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;\n", contact.getName1(), contact.getName2(),
+        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s,%s;;\n", contact.getName1(), contact.getName2(), contact.getName3(),
                 contact.getAddress(), contact.getEmail1(), contact.getEmail2(), contact.getEmail3(), contact.getMobileHome()
                 , contact.getMobile(), contact.getMobileWork(), contact.getGroup()));
       }
@@ -83,7 +83,7 @@ public class ContactDataGenerator {
     List<ContactData> contact = new ArrayList<ContactData>();
     for (int i = 0; i < count; i++) {
       contact.add(new ContactData().withName1(String.format("Gabdullin %s", i)).withName2(String.format("Almaz %s", i))
-              .withAddress(String.format("Moscow %s", i)).withEmail1(String.format("test@yandex.ru %s", i))
+              .withName3(String.format("Almazon %s", i)).withAddress(String.format("Moscow %s", i)).withEmail1(String.format("test@yandex.ru %s", i))
               .withEmail2(String.format("test2@yandex.ru %s", i)).withEmail3(String.format("test3@yandex.ru %s", i))
               .withMobileHome(String.format("112548932", i)).withMobile(String.format("252685", i)).withMobileWork(String.format("158322215", i)).withGroup(String.format("diamind", i)));
     }
