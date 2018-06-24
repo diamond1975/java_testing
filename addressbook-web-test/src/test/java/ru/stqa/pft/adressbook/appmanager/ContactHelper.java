@@ -22,8 +22,9 @@ public class ContactHelper extends HelperBase {
     click(By.linkText("home"));
   }
 
-  public void submitContactCreation(){
-    click(By.name("submit"));
+  public void submitContactCreation() {
+    //click(By.name("submit"));
+    wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
   }
 
   public void fillContactForm(ContactData contactDate, boolean creation) {
@@ -65,6 +66,7 @@ public class ContactHelper extends HelperBase {
 
   public void submitContactModification() {
     click(By.name("update"));
+    //click(By.xpath("//div[@id='content']/form[1]/input[22]"));
   }
 
   public void creat(ContactData contact, boolean b) {
@@ -148,8 +150,8 @@ public class ContactHelper extends HelperBase {
     //wd.findElement(By.xpath(String.format("//input[@value='%s']/../../td[8]/a", id))).click();
     wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
     //click(By.cssSelector(String.format("a[href^='edit.php?id=%s']", id)));
-     //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
-      //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
     //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
     //click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img");
     //wd.findElement(By.xpath("//a[@href='edit.php?id="+ index +"']/img[@title='Edit']")).click();
@@ -160,36 +162,3 @@ public class ContactHelper extends HelperBase {
   }
 
 }
-
-/*
-*   public void delete(int index) {
-    selectContacts(index);
-    deleteSelectContacts();
-    returnToContactPage();
-  }
-    public void selectContacts(int index) {
-  wd.findElements(By.name("selected[]")).get(index).click();
-  }
-    public List<ContactData> list() {
-    List<ContactData> contactCache = new ArrayList<ContactData>();
-    List<WebElement> elements = wd.findElements(By.xpath("//table[@id='maintable']//tr[@name='entry']"));
-    for (WebElement element : elements) {
-      String Lastname = element.findElement(By.xpath(".//td[2]")).getText();
-      String FirstName = element.findElement(By.xpath(".//td[3]")).getText();
-      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      contactCache.add(new ContactData().withId(id).withName1("Almaz1975").withName2("Gabdullin"));
-    }
-    return contactCache;
-  }
-
-      contactCache = new Contacts();
-    List<WebElement> elements = wd.findElements(By.xpath("//table[@id='maintable']//tr[@name='entry']"));
-    for (WebElement element : elements) {
-      String lastname = element.findElement(By.xpath(".//td[2]")).getText();
-      String firstname = element.findElement(By.xpath(".//td[3]")).getText();
-      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      contactCache.add(new ContactData().withId(id).withName1(firstname).withName2(lastname));
-    }
-    return new Contacts(contactCache);
-  }
-  */

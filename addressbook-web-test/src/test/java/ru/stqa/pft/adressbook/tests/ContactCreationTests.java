@@ -58,17 +58,17 @@ public class ContactCreationTests extends TestBase {
 
   @Test(dataProvider = "validContactFromJson")
   public void testСontactContact(ContactData contact) {
-    //logger.info("Start test testСontactContact");
-    Groups groups = app.db().groups();
     app.goTo().contactPage();
     Contacts before = app.db().contacts();
     //File photo = new File("src/test/resources/stru.JPG");
     app.contact().initContactCreation();
-    app.contact().creat(contact.withGroup("diamind"), true);
+    app.contact().creat(contact, true);
     Contacts after = app.db().contacts();
     assertThat(app.contact().count(), equalTo(before.size() + 1));
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+    verifyContactListtInUI();
+
   }
 
   @Test
@@ -84,7 +84,6 @@ public class ContactCreationTests extends TestBase {
     assertThat(app.contact().count(), equalTo(before.size()));
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(before));
-    //logger.info("Stop test testBadContactCreation");
   }
 }
 
