@@ -28,25 +28,28 @@ public class ContactHelper extends HelperBase {
   }
 
   public void fillContactForm(ContactData contactDate, boolean creation) {
-    type(By.name("firstname"), contactDate.getName1());
-    click(By.name("lastname"));
-    wd.findElement(By.name("lastname")).clear();
-    wd.findElement(By.name("lastname")).sendKeys(contactDate.getName2());
-    type(By.name("nickname"), contactDate.getName3());
-    //attach(By.name("photo"),contactDate.getPhoto());
-    type(By.name("address"), contactDate.getAddress());
-    type(By.name("home"), contactDate.getMobileHome());
-    type(By.name("mobile"), contactDate.getMobile());
-    type(By.name("work"), contactDate.getMobileWork());
-    type(By.name("email"), contactDate.getEmail1());
-    type(By.name("email2"), contactDate.getEmail2());
-    type(By.name("email3"), contactDate.getEmail3());
+      type(By.name("firstname"), contactDate.getName1());
+      click(By.name("lastname"));
+      wd.findElement(By.name("lastname")).clear();
+      wd.findElement(By.name("lastname")).sendKeys(contactDate.getName2());
+      type(By.name("nickname"), contactDate.getName3());
+      //attach(By.name("photo"),contactDate.getPhoto());
+      type(By.name("address"), contactDate.getAddress());
+      type(By.name("home"), contactDate.getMobileHome());
+      type(By.name("mobile"), contactDate.getMobile());
+      type(By.name("work"), contactDate.getMobileWork());
+      type(By.name("email"), contactDate.getEmail1());
+      type(By.name("email2"), contactDate.getEmail2());
+      type(By.name("email3"), contactDate.getEmail3());
 
-    if (creation) {
-      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroup());
-    } else {
-      Assert.assertFalse(isElementPresent(By.name("new_group")));
-    }
+      if (creation) {
+          if (contactDate.getGroups().size() > 0) {
+              Assert.assertTrue(contactDate.getGroups().size() == 1);
+              new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactDate.getGroups().iterator().next().getName());
+          } else {
+              Assert.assertFalse(isElementPresent(By.name("new_group")));
+          }
+      }
   }
 
   public void initContactCreation() {

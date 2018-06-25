@@ -68,8 +68,7 @@ public class TestBase {
                 .map((g) -> new ContactData().withId(g.getId()).withName1(g.getName1())
                         .withName2(g.getName2()).withName3(g.getName3()).withAddress(g.getAddress())
                         .withEmail1(g.getEmail1()).withEmail2(g.getEmail2()).withEmail3(g.getEmail3())
-                        .withMobileHome(g.getMobileHome()).withMobile(g.getMobile()).withMobileWork(g.getMobileWork()).withGroup("diamind"))
-                .collect(Collectors.toSet())));
+                        .withMobileHome(g.getMobileHome()).withMobile(g.getMobile()).withMobileWork(g.getMobileWork())).collect(Collectors.toSet())));
       }
     }
   }

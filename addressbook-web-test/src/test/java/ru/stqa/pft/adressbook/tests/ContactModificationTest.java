@@ -17,8 +17,9 @@ public class ContactModificationTest extends TestBase {
                 app.contact().creat(new ContactData().withName1("Almaz1988").withName2("Gabdullin").withName3("Almazon")
                         .withPhoto(new java.io.File("photo")).withAddress("Moscow, prospect Mira, " +
                         "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
-                        .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru")
-                        .withGroup("diamind"), true);
+                        .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru")
+                        .withEmail3("diamond167@yandex.ru"),true);
+
         }
     }
 
