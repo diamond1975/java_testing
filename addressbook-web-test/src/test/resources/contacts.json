@@ -10,8 +10,7 @@
     "email1": "test@yandex.ru 0",
     "email2": "test2@yandex.ru 0",
     "email3": "test3@yandex.ru 0",
-    "group": "diamind"
-
+    "photo": "src/tests/resources/stru.jpg"
   },
   {
     "name1": "Gabdullin 1",
@@ -24,7 +23,6 @@
     "email1": "test@yandex.ru 1",
     "email2": "test2@yandex.ru 1",
     "email3": "test3@yandex.ru 1",
-    "group": "diamind"
-
+    "photo": "src/tests/resources/stru.jpg"
   }
 ]

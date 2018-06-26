@@ -89,7 +89,6 @@ public class ContactData {
     @Expose
     @Column(name = "photo")
     @Type(type = "text")
-    @Transient
     private String photo = "src/tests/resources/stru.jpg";
 
     public File getPhoto() {

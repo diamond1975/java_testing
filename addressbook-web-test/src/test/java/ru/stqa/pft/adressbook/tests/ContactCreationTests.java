@@ -4,11 +4,14 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pft.adressbook.model.ContactData;
 import ru.stqa.pft.adressbook.model.Contacts;
+import ru.stqa.pft.adressbook.model.GroupData;
 import ru.stqa.pft.adressbook.model.Groups;
+import org.testng.Assert;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,6 +19,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -54,6 +58,7 @@ public class ContactCreationTests extends TestBase {
       }.getType());// List <ContactData>.class
       return contacts.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
     }
+
   }
 
   @Test(dataProvider = "validContactFromJson")
@@ -63,7 +68,7 @@ public class ContactCreationTests extends TestBase {
     Contacts before = app.db().contacts();
     //File photo = new File("src/test/resources/stru.JPG");
     app.contact().initContactCreation();
-      app.contact().creat(contact.inGroups(groups.iterator().next()),true);
+    app.contact().creat(contact.inGroups(groups.iterator().next()), true);
     Contacts after = app.db().contacts();
 
     assertThat(app.contact().count(), equalTo(before.size() + 1));
@@ -78,14 +83,36 @@ public class ContactCreationTests extends TestBase {
     //logger.info("Start test testBadContactCreation");
     app.goTo().contactPage();
     Contacts before = app.db().contacts();
-    //File photo = new File("src/test/resources/stru.JPG");
-    ContactData contact = new ContactData().withName1("Almaz1975'").withName2("Gabdullin").withName3("Almazon").withAddress("Moscow, prospect Mira, " +
-            "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
-            .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru");
+    File photo = new File("src/test/resources/stru.JPG");
+    ContactData contact = new ContactData().withName1("Almaz1975'").withName2("Gabdullin").withName3("Almazon")
+            .withPhoto(photo).withAddress("Moscow, prospect Mira, " + "d 16, rv 25").withMobileHome("89651249288")
+            .withMobile("89651249288").withMobileWork("89651249236").withEmail1("diamond1976@yandex.ru")
+            .withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru");
     app.contact().creat(contact, true);
     assertThat(app.contact().count(), equalTo(before.size()));
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(before));
   }
+
+  @Test
+  public void testContactCreationPhoto() {
+    app.goTo().groupsPage();
+    Groups groups = app.db().groups();
+    Contacts before = app.db().contacts();
+    File photo = new File("src/test/resources/stru.jpg");
+    ContactData contact = new ContactData()
+            .withName1("Almaz1").withName2("Gabdullin").withPhoto(photo)
+            .withAddress("Moscow, prospect Mira, " + "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288")
+            .withMobileWork("89651249236").withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru")
+            .withEmail3("diamond167@yandex.ru").inGroups(groups.iterator().next());
+    app.contact().initContactCreation();
+    app.contact().creat(contact, true);
+    assertThat(app.contact().count(), equalTo(before.size() + 1));
+    Contacts after = app.db().contacts();
+    assertThat(after, equalTo(
+            before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+    verifyContactListtInUI();
+  }
+
 }
 
