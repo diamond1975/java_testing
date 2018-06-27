@@ -89,7 +89,7 @@ public class ContactData {
     @Expose
     @Column(name = "photo")
     @Type(type = "text")
-    private String photo = "src/tests/resources/stru.jpg";
+    private String photo = "src/test/resources/stru.jpg";
 
     public File getPhoto() {
         return new File(photo);
@@ -219,44 +219,6 @@ public class ContactData {
         return email3;
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ContactData that = (ContactData) o;
-
-        if (id != that.id) return false;
-        if (name1 != null ? !name1.equals(that.name1) : that.name1 != null) return false;
-        if (name2 != null ? !name2.equals(that.name2) : that.name2 != null) return false;
-        if (name3 != null ? !name3.equals(that.name3) : that.name3 != null) return false;
-        if (address != null ? !address.equals(that.address) : that.address != null) return false;
-        if (mobileHome != null ? !mobileHome.equals(that.mobileHome) : that.mobileHome != null) return false;
-        if (mobile != null ? !mobile.equals(that.mobile) : that.mobile != null) return false;
-        if (mobileWork != null ? !mobileWork.equals(that.mobileWork) : that.mobileWork != null) return false;
-        if (email1 != null ? !email1.equals(that.email1) : that.email1 != null) return false;
-        if (email2 != null ? !email2.equals(that.email2) : that.email2 != null) return false;
-        return (email3 != null ? !email3.equals(that.email3) : that.email3 != null);
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (name1 != null ? name1.hashCode() : 0);
-        result = 31 * result + (name2 != null ? name2.hashCode() : 0);
-        result = 31 * result + (name3 != null ? name3.hashCode() : 0);
-        result = 31 * result + (address != null ? address.hashCode() : 0);
-        result = 31 * result + (mobileHome != null ? mobileHome.hashCode() : 0);
-        result = 31 * result + (mobile != null ? mobile.hashCode() : 0);
-        result = 31 * result + (mobileWork != null ? mobileWork.hashCode() : 0);
-        ;
-        result = 31 * result + (email1 != null ? email1.hashCode() : 0);
-        result = 31 * result + (email2 != null ? email2.hashCode() : 0);
-        result = 31 * result + (email3 != null ? email3.hashCode() : 0);
-        return result;
-    }
 
     @Override
     public String toString() {

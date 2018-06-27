@@ -46,7 +46,7 @@ public class ContactCreationTests extends TestBase {
 
   @DataProvider
   public Iterator<Object[]> validContactFromJson() throws IOException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")))) {
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")));
       String json = "";
       String line = reader.readLine();
       while (line != null) {
@@ -58,7 +58,13 @@ public class ContactCreationTests extends TestBase {
       }.getType());// List <ContactData>.class
       return contacts.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
     }
+    @BeforeMethod
+    public void ensurePreconditions() {
+      if (app.db().groups().size() ==0) {
+        app.goTo().groupsPage();
+        app.group().creat(new GroupData().withName("NameTest").withFooter("FooterTest").withHeader("HeaderTest"));
 
+      }
   }
 
   @Test(dataProvider = "validContactFromJson")
@@ -101,7 +107,7 @@ public class ContactCreationTests extends TestBase {
     Contacts before = app.db().contacts();
     File photo = new File("src/test/resources/stru.jpg");
     ContactData contact = new ContactData()
-            .withName1("Almaz1").withName2("Gabdullin").withPhoto(photo)
+            .withName1("Almaz1").withName2("Gabdullin").withName3("Almazon").withPhoto(photo)
             .withAddress("Moscow, prospect Mira, " + "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288")
             .withMobileWork("89651249236").withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru")
             .withEmail3("diamond167@yandex.ru").inGroups(groups.iterator().next());

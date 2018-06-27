@@ -33,7 +33,7 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.name("lastname")).clear();
     wd.findElement(By.name("lastname")).sendKeys(contactDate.getName2());
     type(By.name("nickname"), contactDate.getName3());
-//    attach(By.name("photo"), contactDate.getPhoto());
+    //attach(By.name("photo"), contactDate.getPhoto());
     type(By.name("address"), contactDate.getAddress());
     type(By.name("home"), contactDate.getMobileHome());
     type(By.name("mobile"), contactDate.getMobile());
@@ -96,6 +96,20 @@ public class ContactHelper extends HelperBase {
     returnToContactPage();
   }
 
+  public void selectedAddedContactById(int id) {
+    wd.findElement(By.cssSelector("input[id='" + id + "']")).click();
+  }
+
+  public void addInGroupById(int id) {
+    click(By.cssSelector("select[name='to_group']"));
+    click(By.cssSelector(".right>select>option[value='" + id + "']"));
+    click(By.name("add"));
+  }
+
+  public boolean isContactExist() {
+    return isElementPresent(By.name("selected[]"));
+  }
+
   public boolean isThereAContact() {
     return isElementPresent(By.name("selected[]"));
   }
@@ -141,17 +155,25 @@ public class ContactHelper extends HelperBase {
     String email2 = wd.findElement(By.name("email2")).getAttribute("value");
     String email3 = wd.findElement(By.name("email3")).getAttribute("value");
     wd.navigate().back();
+    wd.navigate().back();
     return new ContactData().withId(contact.getId()).withName1(firstname).withName2(lastname).withMobileHome(home)
             .withMobile(mobile).withMobileWork(work).withAddress(address).withEmail1(email).withEmail2(email2).withEmail3(email3);
   }
 
   public void initContactModificationById(int id) {
-    //WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']",id)));
+    WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id)));
+    WebElement row = checkbox.findElement(By.xpath("./../.."));
+    List<WebElement> cells = row.findElements(By.tagName("td"));
+    cells.get(7).findElement(By.tagName("a")).click();
+  }
+
+}
+  //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+  /*//WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']",id)));
     //WebElement row = checkbox.findElement(By.xpath("./../.."));
     //List <WebElement> cells = row.findElements(By.tagName("td"));
     //cells.get(7).findElement((By.tagName("a")).click();
     //wd.findElement(By.xpath(String.format("//input[@value='%s']/../../td[8]/a", id))).click();
-    wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
     //click(By.cssSelector(String.format("a[href^='edit.php?id=%s']", id)));
     //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
     //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
@@ -162,6 +184,8 @@ public class ContactHelper extends HelperBase {
     //wd.findElement(By.xpath(String.format("//tr[.//input[@value='%s']]/td[8]/a", id))).click();
     //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
 
-  }
+      /*public void initContactModification (int index){
 
-}
+      wd.findElement(By.xpath("//a[@href='edit.php?id=" + index + "']/img[@title='Edit']")).click();
+    }*/
+

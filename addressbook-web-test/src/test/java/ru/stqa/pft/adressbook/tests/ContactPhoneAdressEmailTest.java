@@ -21,6 +21,7 @@ public class ContactPhoneAdressEmailTest extends TestBase {
             app.group().creat(new GroupData().withName("diamond").withFooter("тест 22").withHeader("тест 44"));
             groups = app.db().groups();
         }
+
       app.goTo().contactPage();
       if (app.db().contacts().size() == 0) {
         app.contact().creat(new ContactData().withName1("Almaz").withName2("Gabdullin")
