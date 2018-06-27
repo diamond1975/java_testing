@@ -17,7 +17,7 @@ public class ContactModificationTest extends TestBase {
 
       Groups groups = app.db().groups();
 
-      if (app.db().groups().size() == 0) { //Если группа = null, то заполняем
+      if (app.db().groups().size() == 0) {
         app.goTo().groupsPage();
         app.group().creat(new GroupData().withName("diamind").withHeader("тест 22").withFooter("тест 44"));
         groups = app.db().groups();
