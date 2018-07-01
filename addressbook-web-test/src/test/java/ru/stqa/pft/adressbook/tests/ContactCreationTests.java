@@ -3,7 +3,6 @@ package ru.stqa.pft.adressbook.tests;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,7 +10,6 @@ import ru.stqa.pft.adressbook.model.ContactData;
 import ru.stqa.pft.adressbook.model.Contacts;
 import ru.stqa.pft.adressbook.model.GroupData;
 import ru.stqa.pft.adressbook.model.Groups;
-import org.testng.Assert;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,7 +17,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -62,7 +59,7 @@ public class ContactCreationTests extends TestBase {
     public void ensurePreconditions() {
       if (app.db().groups().size() ==0) {
         app.goTo().groupsPage();
-        app.group().creat(new GroupData().withName("NameTest").withFooter("FooterTest").withHeader("HeaderTest"));
+        app.group().create(new GroupData().withName("NameTest").withFooter("FooterTest").withHeader("HeaderTest"));
 
       }
   }
@@ -74,7 +71,7 @@ public class ContactCreationTests extends TestBase {
     Contacts before = app.db().contacts();
     //File photo = new File("src/test/resources/stru.JPG");
     app.contact().initContactCreation();
-    app.contact().creat(contact.inGroups(groups.iterator().next()), true);
+    app.contact().create(contact.inGroups(groups.iterator().next()), true);
     Contacts after = app.db().contacts();
 
     assertThat(app.contact().count(), equalTo(before.size() + 1));
@@ -94,7 +91,7 @@ public class ContactCreationTests extends TestBase {
             .withPhoto(photo).withAddress("Moscow, prospect Mira, " + "d 16, rv 25").withMobileHome("89651249288")
             .withMobile("89651249288").withMobileWork("89651249236").withEmail1("diamond1976@yandex.ru")
             .withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru");
-    app.contact().creat(contact, true);
+    app.contact().create(contact, true);
     assertThat(app.contact().count(), equalTo(before.size()));
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(before));
@@ -112,7 +109,7 @@ public class ContactCreationTests extends TestBase {
             .withMobileWork("89651249236").withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru")
             .withEmail3("diamond167@yandex.ru").inGroups(groups.iterator().next());
     app.contact().initContactCreation();
-    app.contact().creat(contact, true);
+    app.contact().create(contact, true);
     assertThat(app.contact().count(), equalTo(before.size() + 1));
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(

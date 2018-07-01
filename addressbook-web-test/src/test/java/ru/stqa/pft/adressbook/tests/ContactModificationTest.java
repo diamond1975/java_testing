@@ -17,15 +17,15 @@ public class ContactModificationTest extends TestBase {
 
       Groups groups = app.db().groups();
 
-      if (app.db().groups().size() == 0) {
+      if (app.db().groups().size() == 0) { //Если группа = null, то заполняем
         app.goTo().groupsPage();
-        app.group().creat(new GroupData().withName("diamind").withHeader("тест 22").withFooter("тест 44"));
+        app.group().create(new GroupData().withName("diamind").withHeader("тест 22").withFooter("тест 44"));
         groups = app.db().groups();
       }
 
       app.goTo().contactPage();
       if ((app.db().contacts().size() == 0)) {
-        app.contact().creat(new ContactData().withName1("Almaz1888").withName2("Gabdullin").withName3("Almazod").withAddress("Moscow, prospect Mira, " +
+        app.contact().create(new ContactData().withName1("Almaz1888").withName2("Gabdullin").withName3("Almazod").withAddress("Moscow, prospect Mira, " +
                         "d 16, rv 25").withMobileHome("89651249288").withMobile("89651249288").withMobileWork("89651249236")
                 .withEmail1("diamond1976@yandex.ru").withEmail2("diamond1977@yandex.ru").withEmail3("diamond167@yandex.ru")
                 .inGroups(groups.iterator().next()).withPhoto(new java.io.File("photo")),true);

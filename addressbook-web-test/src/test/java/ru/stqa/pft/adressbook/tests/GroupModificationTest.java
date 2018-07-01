@@ -15,7 +15,7 @@ public class GroupModificationTest extends TestBase {
   public void ensurePreconditions() {
     if (app.db().groups().size() == 0) {
     app.goTo().groupsPage();
-    app.group().creat(new GroupData().withName("diamind"));
+    app.group().create(new GroupData().withName("diamind"));
     }
   }
 
@@ -28,7 +28,7 @@ public class GroupModificationTest extends TestBase {
     app.group().modify(group);
     Groups after = app.db().groups();
     assertEquals(after.size(), before.size());
-    assertThat(after,equalTo(before.without(modifiedGroup).withAdded(group)));
+    assertThat(after,equalTo(before.without(modifiedGroup).withDistrict(group)));
     verifyGroupListInUI();
   }
 }

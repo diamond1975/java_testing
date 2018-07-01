@@ -3,6 +3,7 @@ package ru.stqa.pft.adressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.adressbook.model.GroupData;
 import ru.stqa.pft.adressbook.model.Groups;
 
@@ -50,7 +51,7 @@ public class GroupHelper extends HelperBase {
     click(By.name("update"));
   }
 
-  public void creat(GroupData group) {
+  public void create(GroupData group) {
     initGroupCreation();
     fillGroupForm(group);
     submitGroupCreation();
@@ -72,6 +73,21 @@ public class GroupHelper extends HelperBase {
     deleteSelectGroups();
     groupsCache = null;
     returnToGroupPage();
+  }
+    private void selectGroupInTopList(GroupData groupData) {
+      Select dropdown = new Select(wd.findElement(By.name("group")));
+      dropdown.selectByVisibleText(groupData.getName());
+    }
+  private void selectContact() {
+    wd.findElement(By.name("selected[]")).click();
+  }
+  private void deleteFromSelectedGroup() {
+    click(By.name("remove"));
+  }
+  public void deleteFromGroup(GroupData group) {
+    selectGroupInTopList(group);
+    selectContact();
+    deleteFromSelectedGroup();
   }
   public int count(){
     return wd.findElements(By.name("selected[]")).size();

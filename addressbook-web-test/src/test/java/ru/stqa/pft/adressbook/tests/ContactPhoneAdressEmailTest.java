@@ -18,13 +18,13 @@ public class ContactPhoneAdressEmailTest extends TestBase {
         Groups groups = app.db().groups();
         if (app.db().groups().size() == 0) {
             app.goTo().groupsPage();
-            app.group().creat(new GroupData().withName("diamond").withFooter("тест 22").withHeader("тест 44"));
+            app.group().create(new GroupData().withName("diamond").withFooter("тест 22").withHeader("тест 44"));
             groups = app.db().groups();
         }
 
       app.goTo().contactPage();
       if (app.db().contacts().size() == 0) {
-        app.contact().creat(new ContactData().withName1("Almaz").withName2("Gabdullin")
+        app.contact().create(new ContactData().withName1("Almaz").withName2("Gabdullin")
                 .withMobileHome("55555").withMobile("8888").withMobileWork("99999").inGroups(groups.iterator().next()), true);
       }
     }
