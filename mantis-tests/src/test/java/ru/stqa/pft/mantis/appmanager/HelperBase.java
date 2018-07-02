@@ -1,9 +1,8 @@
 package ru.stqa.pft.mantis.appmanager;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.io.File;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class HelperBase {
   protected WebDriver wd;
@@ -27,5 +26,3 @@ public class HelperBase {
     }
   }
 }
-
-
