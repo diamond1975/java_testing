@@ -29,7 +29,7 @@ public class HttpSession {
     params.add(new BasicNameValuePair("username", username));
     params.add(new BasicNameValuePair("password", password));
     params.add(new BasicNameValuePair("secure_session", "on"));
-    params.add(new BasicNameValuePair("return", "index.php"));
+    params.add(new BasicNameValuePair("return", "/mantisbt-2.15.0/login_password_page.php"));
     post.setEntity(new UrlEncodedFormEntity(params));
     CloseableHttpResponse response = httpclient.execute(post);
     String body = geTextFrom(response);
